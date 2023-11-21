@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Three</title>
+</head>
+
+<body>
+    <h1>Welcome Back!</h1>
+    <article>
+        <h2>Here's a great video from YouTube!</h2>
+        <!-- This video from youtube can be embedded  -->
+        <iframe width="220" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
+            allowfullscreen></iframe>
+        <!-- But some youtube videos cannot be embedded. The reason why is that owners of the video 
+            can decide whether or not to allow it.-->
+        <iframe width="220" height="180" src="https://www.youtube.com/embed/KQetemT1sWc" frameborder="0"
+            allowfullscreen></iframe>
+        <h2>Here's a great video that you downloaded</h2>
+        <!-- If you downloaded a video, and you want to display it  -->
+        <video width="300" height="200" src="test.mp4" muted autoplay controls></video>
+        <!-- you could even use a poster -->
+        <video width="300" height="200" src="test.mp4" muted controls poster="test.jpg"></video>
+    </article>
+    <article>
+        <h2>Here's some music from Spotify!</h2>
+        <iframe src="https://embed.spotify.com/?uri=spotify:track:5JunxkcjfCYcY7xJ29tLai" frameborder="0"></iframe>
+        <h2>Here's some music that you downloaded!</h2>
+        <!-- If you downloaded an audio, and you want to display it  -->
+        <audio controls src="test.mp3"></audio>
+    </article>
+    <hr>
+</body>
+
+</html>
