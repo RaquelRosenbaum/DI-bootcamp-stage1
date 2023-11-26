@@ -19,7 +19,6 @@ body {
     flex-direction: row;
     text-align: justify;
       }
-
 .flex-container2 {
     display: flex;
     flex-wrap: nowrap;
@@ -53,3 +52,29 @@ body {
     flex-direction: row;
     text-align: center;
     }
+div {
+    height="400"
+    width="600"
+}
+table{
+    border-collapse: collapse;
+    border: 3px solid black
+}
+td, td {
+    border-collapse: collapse;
+    border: 3px solid blue 
+    padding: 10px
+}
+.rect{
+    display: inline-block 
+    width: 100px;
+    height: 50px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
