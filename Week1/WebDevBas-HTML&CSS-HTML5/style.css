@@ -1,14 +1,25 @@
-h1 {                           /* Selector */
+ h1 {                           /* Selector */
     color: navy;                   
     font-size: 2rem;   
     background-color: skyblue            
     }
 body {
     color: navy;                  
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: skyblue
+    width: 50vw; height: 20vh;
+    position- relative;
+    padding: 15px
+    display: flex; align-items: center; justify-content: center; height: 100vh; */
     }
-.flex-container1 {
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+      }
+}
+    .flex-container1 {
     display: flex;
     flex-wrap: nowrap;
     width: 1400px;
@@ -58,11 +69,22 @@ div {
 }
 table  {
     border-collapse: collapse;
-    border: 3px dashed #0038b8
+    border: 3px solid #0038b8
 }
 table tr  {
     border-collapse: collapse;
     border: 3px solid #0038b8
+    padding: 1px
+}
+table td  {
+    border-collapse: collapse;
+    border: 3px solid #0038b8
+    padding: 1px
+}
+table th  {
+    border-collapse: collapse;
+    border: 3px solid #0038b8
+    padding: 1px
 }
 .rect{
     display: inline-block 
@@ -76,4 +98,4 @@ table tr  {
 
 .blue{
     background-color: #0038b8;
-}
+} */
