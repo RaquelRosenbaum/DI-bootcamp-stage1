@@ -53,17 +53,16 @@ body {
     text-align: center;
     }
 div {
-    height="400"
-    width="600"
+    height: 400px;
+    width: 600px;
 }
-table{
+table  {
     border-collapse: collapse;
-    border: 3px solid black
+    border: 3px dashed #0038b8
 }
-td, td {
+table tr  {
     border-collapse: collapse;
-    border: 3px solid blue 
-    padding: 10px
+    border: 3px solid #0038b8
 }
 .rect{
     display: inline-block 
@@ -71,10 +70,10 @@ td, td {
     height: 50px;
 }
 
-.red {
-    background-color: red;
+.white {
+    background-color: #FFFFFF;
 }
 
 .blue{
-    background-color: blue;
+    background-color: #0038b8;
 }
