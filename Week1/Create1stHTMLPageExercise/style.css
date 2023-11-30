@@ -1,3 +1,43 @@
-ol.romnumordlist {
+.romnumordlist {
     list-style-type: upper-roman;
     }
+.center {
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+          }
+    }
+.catunderlTitle {
+    text-decoration: underline;
+    margin-left: 3em
+}
+.italichousecats {
+    font-style: italic;
+}
+.boldcompanionship {
+    font-weight: bolder;
+}
+.ulcatsenses {
+    margin-block-start: 6em;
+}
+table  {
+    border-collapse: collapse;
+    border: 3px solid black
+}
+table tr  {
+    border-collapse: collapse;
+    border: 3px solid black
+    padding: 1px
+}
+table td  {
+    border-collapse: collapse;
+    border: 3px solid black
+    padding: 1px
+}
+table th  {
+    border-collapse: collapse;
+    border: 3px solid black
+    padding: 1px
+}
