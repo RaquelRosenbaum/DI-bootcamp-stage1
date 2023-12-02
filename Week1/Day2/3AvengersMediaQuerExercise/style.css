@@ -49,3 +49,27 @@ li {
     width: 100%;
     color: black
  }
+ /* media queries */
+@media screen
+ and (min-width: 1200px)
+ and (max-width: 1600px) {
+}
+@media screen and (max-width: 600px) {
+    h1 {
+        color: blue
+    }
+   }
+@media screen and (max-width: 600px) {
+    /* apply for screens where the maximum width is 600px */
+   }
+@media screen and (min-width: 680px) {
+    aside {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    aside {
+        display: none;
+    }
+}
