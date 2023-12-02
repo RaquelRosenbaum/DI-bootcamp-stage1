@@ -1,22 +1,42 @@
+body {
+    background-image: url(logo.svg);
+  }
+
 /* nav bar */
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    left: auto;
+    right: auto;
+    padding: 20px 20px ;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute
+    color: white
     }
       
 li {
     display: inline;
     }
 
-/* google font style requirement code */
-h1, h2, h3, h4, h5, h6 {
+.thorheading {
     color: black;
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.thorparag {
+    color: black;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif; 
 }
 
-/* google font style requirement code */
-p {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+ }
