@@ -1,22 +1,31 @@
-.outer {
-    border: 1px solid red;
-    height: 70vh;
-    width: 80vw;
+.container {
+    height: 600px;
+    width: 600px;
     display: flex;
-    flex-direction; column;
-    justify-content: space-between;
-    align-items: center;
-}
-.inner {
-    background-color: aqua
-    height: 50px;
-    width: 100%
+    border: solid red;
+    /* gap: 50px; */
+    flex-direction: row;
+    /* justify-content: space-evenly;
+    align-items: center */
     
+}
+.one {
+    height: 50px;
+    flex: 0.5;
+    background-color: rgb(0, 234, 255)
 
 }
-.center {
-    width: 50%
-    height: 100px;
-    /* align-self: flex-end this for exercise 2 */
+
+.two {
+    height: 50px;
+    flex: 4;
+    /* align-self: flex-end; */
+    background-color: yellow;
+}
+
+.three {
+    height: 50px;
+    flex: 3;
+    background-color: rgb(0, 234, 255)
     
-        } 
+}
