@@ -3,7 +3,7 @@
     width: 600px;
     display: flex;
     border: solid red;
-    /* gap: 50px; */
+    gap: 50px;
     flex-direction: row;
     /* justify-content: space-evenly;
     align-items: center */

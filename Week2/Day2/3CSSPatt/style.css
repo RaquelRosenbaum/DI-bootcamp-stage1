@@ -1,0 +1,46 @@
+
+.grid-wrapper1 {
+    height: 80vh;
+    width: 80vw;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+	
+    }
+.grid-wrapper2 {
+    height: 80vh;
+    width: 80vw;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+
+.box-left {
+    height: 70px;
+    width: 70px;
+    border: solid black;
+    background-color: yellow;
+}
+
+.box-right {
+    height: 70px;
+    width: 70px;
+    border: solid black;
+    background-color: yellow;
+}
+
+.flex-wrapper {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    }
+.box-center {
+    height: 70px;
+    width: 70px;
+    border: solid black;
+    background-color: yellow;
+    
+}
