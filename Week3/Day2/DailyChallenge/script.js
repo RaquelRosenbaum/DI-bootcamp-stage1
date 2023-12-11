@@ -38,7 +38,7 @@ const moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
 // Access and then console.log “Oranges”.
 
-moreFruits[0,0];
+moreFruits[0][0];
 console.log(moreFruits);
 
 // banana
