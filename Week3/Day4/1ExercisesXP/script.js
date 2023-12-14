@@ -77,12 +77,13 @@
 // name_user1, name_user2 and 3 more are online
 
 // OPTION WITHOUT USING USERNAME/PASS OBJECTS INSIDE THE ARRAY:
-const users=["Lea123","Princess45","doglovers","helooo@000"];
-if (users.length===0); {   
+const users=["Lea123"];
+if (users.length===0) {   
     console.log("no one is online");}
 else if (users.length===1){
     console.log(users[0]+"is online");}
 else if (users.length===2){
-    console.log(users[0]+"is online");}
+    console.log(users[0]+users[1]+"is online");}
 else (users.length>2);{
-    console.log(users[0]+", "+users[1]+","+" and"+((users.length)-2)+"more are online");}
+    console.log(users[0]+", "+users[1]+","+" and "+((users.length)-2)+" more are online");}
+    // ,"Princess45","doglovers","helooo@000"
