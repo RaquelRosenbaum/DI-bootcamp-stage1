@@ -3,6 +3,20 @@
 
 // debugging - better to do it in Chrome, the dev tools are better than anything you’ll find in VS Code
 
+// /* for-loop syntax in JavaScript */
+// for (variable_initialize; condition; change_variable) {
+        // code block to be executed
+//       }
+
+// for (let i = 0; i <= 10; i++) {
+//         console.log(i);
+//     }
+
+let arr = [1, 4, 7, 10]
+for (let i=0; i<arr.length; i++) {
+    console.log(arr[i]);
+}
+
 // i++ == i=i+1
 
 // for (let i = 0; i < 11; i++) {
@@ -168,3 +182,39 @@
 //     }
 //     console.log(name);
 //     }
+
+// FROM THE VIDEO ON LOOPS IN DI PLATFORM:
+
+//forEach loops
+
+// var todos = [
+//         "clean room",
+//         "brush teeth",
+//         "exercise",
+//         "study javascript",
+//         "eat healthy"
+// ];
+
+// var todosImportant = [
+//         "cook",
+//         "pay bill",
+//         "do errand",
+//         "fill up form",
+//         "make dessert for party"
+// ];
+
+// var todosLength = todos.length;
+
+// for (var i=0; i < todosLength; i++) {
+//         console.log(todos[i], i);
+// }
+
+// what is new:
+
+// function logTodos(todos, i) {
+//         console.log(todos, i);
+// }
+
+// todos.forEach(logTodos);
+// todosImportant.forEach(logTodos);
+
