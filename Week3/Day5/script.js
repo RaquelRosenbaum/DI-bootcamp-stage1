@@ -12,10 +12,38 @@
 //         console.log(i);
 //     }
 
-let arr = [1, 4, 7, 10]
-for (let i=0; i<arr.length; i++) {
-    console.log(arr[i]);
-}
+// let arr = [1, 4, 7, 10]
+// for (let i=0; i<arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// let obj1 = {name: "Bill"}
+// let obj2 = Object.assign({},obj1)
+// console.log(obj2);
+// console.log(obj1);
+
+// let obj2 = {...obj1}
+
+// Dates in Javascript are objects.
+
+//     let today = new Date(); //current date
+//     console.log(today)
+
+//     let date1 = new Date(2019, 10, 4); // 2019-11-04 
+//     console.log(date1) //The month is zero-index. Day and year are not. 
+
+    // You can set a new date relative to another date object:
+//     let date2 = new Date();
+//     date2.setDate(date2.getDate() + 5); 
+//     console.log(date2); //5 days into the future
+// You can compare dates if (date1 > date2) {}
+
+// some Array methods are similar to loops: Array.values(), Array.keys(), Array.entries(), Array.every(), Array.some(), Array.map(), Array.filter(), Array.reduce(), etc.)
+
+// When working with arrays, it’s far better to use a built-in Array method than a for-loop. But not all array methods are loop-like. So I included only the ones that are relevant to working with iterating lists of values.
+
+// You can show the difference between dates, displayed in milliseconds. let d3 = date2 - date1.
+// To then show that difference converted to days by declaring d3 = d3 / (1000 * 60 * 60 *24).
 
 // i++ == i=i+1
 
