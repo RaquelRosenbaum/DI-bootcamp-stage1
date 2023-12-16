@@ -9,12 +9,21 @@
 // * * * * *
 // * * * * * *
 
-let stars= ""
-for (let i = 0; i<6; i++) 
-     for(let i of stars){
-        console.log(stars.repeat(i));
-    }
+// HAD TO WATCH VIDEO AND OTHER SOURCES GIVEN FOR ASSIGNMENT BUT FOUND A DIFFERENT WAY TO DO IT ALSO, remembered "repeat" method from material on ES6:
 
+// Single Loop:
+// let stars= "*"
+//     for (let i = 1; i<7; i++) console.log(stars.repeat(i));
+    
+// Nested Loop from Solution on video:
+// for (let i = 0; i < 6; i++){
+//     let numbStrs = i + 1
+//     let dispStrs = ""
+//     for (let j = 0; j < numbStrs; j++){
+//         dispStrs = dispStrs + "*"
+//     }
+//     console.log(dispStrs)
+// }
 
 
 // for (let element of colors) {
