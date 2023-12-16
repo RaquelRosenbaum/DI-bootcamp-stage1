@@ -12,7 +12,7 @@
 // HAD TO WATCH VIDEO AND OTHER SOURCES GIVEN FOR ASSIGNMENT BUT FOUND A DIFFERENT WAY TO DO IT ALSO, remembered "repeat" method from material on ES6:
 
 // Single Loop:
-// let stars= "*"
+// let stars= "🌟"
 //     for (let i = 1; i<7; i++) console.log(stars.repeat(i));
     
 // Nested Loop from Solution on video:
@@ -20,7 +20,7 @@
 //     let numbStrs = i + 1
 //     let dispStrs = ""
 //     for (let j = 0; j < numbStrs; j++){
-//         dispStrs = dispStrs + "*"
+        // dispStrs = dispStrs + "🌟"
 //     }
 //     console.log(dispStrs)
 // }
