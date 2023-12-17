@@ -82,8 +82,6 @@
     
         // shearit is remainder in hebrew - modulo
 
-
-
 // FOR IN LOOPS (objects only):
             // always used when we loop through an object
 // let person = {
@@ -170,7 +168,7 @@
 
 // break
 
-// for(leti=0; i<10; i++_ {
+// for(let i=0; i<10; i++) {
 //     console.log("before if statement");
 //     console.log(i);
 //     if (i === 3) {
@@ -202,7 +200,7 @@
 //         console.log(name);
 //     }
 
-// // #2:
+// #2:
 // let names=["john", "sarah", 23, "Rudolf", 34];
 // for (let name of names) {
 //     if (typeof name !== "string"){
@@ -246,3 +244,16 @@
 // todos.forEach(logTodos);
 // todosImportant.forEach(logTodos);
 
+// let c = 0;
+// mark: for (let i = 0; i < 5; i++)
+//     inner: for (let j = 0; j < 5; j++)
+//         c++; if (i == 2) break mark;
+// console.log(c); // 11
+
+// let c = 0;
+// mark: for (let i = 0; i < 5; i++)
+//     inner: for (let j = 0; j < 5; j++)
+//         c++; if (i == 2) break inner;
+// console.log(c); // 21
+
+// for (let i = 0;; i++) { console.log("loop"); break; };

@@ -40,7 +40,7 @@
 // else if (newDog!=="Chihuahua")
 //     console.log("I don't care, I prefer cats");
 
-// // OR another way to do it using regex:
+// OR another way to do it using regex:
 // var newerDog="CHIHUAHUAAAAAA";
 // var regex = /[a-zA-Z0-9]/g;
 // console.log(newerDog.match(regex).length);
@@ -91,12 +91,12 @@
 //users[0].user_name??
 
 // (OPTION USING USERNAME/PASS OBJECTS INSIDE THE ARRAY):
-const users=[{"Lea123","Princess45"},{"doglovers"},{"helooo@000"}];
-if (users.length=0) {   
-    console.log("no one is online");}
-else if (users.length=1){
-    console.log(users[0].user_name+" is online");}
-else if (users.length=2){
-    console.log(users[0].user_name+, +users[1].user_name+"is online");}
-else (users.length>2);{
-    console.log(users[0].user_name+", "+users[1].user_name+","+" and "+((users.length)-2)+" more are online");}
+// const users=[{"Lea123","Princess45"},{"doglovers"},{"helooo@000"}];
+// if (users.length=0) {   
+//     console.log("no one is online");}
+// else if (users.length=1){
+//     console.log(users[0].user_name+" is online");}
+// else if (users.length=2){
+//     console.log(users[0].user_name+, +users[1].user_name+"is online");}
+// else (users.length>2);{
+//     console.log(users[0].user_name+", "+users[1].user_name+","+" and "+((users.length)-2)+" more are online");}
