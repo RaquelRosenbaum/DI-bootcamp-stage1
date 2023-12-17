@@ -195,3 +195,22 @@ console.log(building.nameOfTenants[1],building.numberOfRoomsAndRent[1,0]);
 //         console.log(names)
 //     }
     
+
+// Solution from class:
+// see scrnshot
+
+
+// another example from class:
+let x = 0 
+while(x<4){
+    x++
+    console.log("while",x);
+}
+// AND:
+
+let x=0;
+do {
+    x++;
+    console.log("do",x);
+}
+while(x<0);

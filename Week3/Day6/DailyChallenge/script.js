@@ -20,8 +20,15 @@
 //     let numbStrs = i + 1
 //     let dispStrs = ""
 //     for (let j = 0; j < numbStrs; j++){
-        // dispStrs = dispStrs + "🌟"
+//         dispStrs = dispStrs + "🌟"
 //     }
 //     console.log(dispStrs)
 // }
-
+//Solution shown in class:
+for(let i = 0; i <= 6; i++) {
+        let star = ""
+        for(let x=0; x<i; x++) {
+                star += "*"; //this is star = star + "*"
+        }
+        console.log(star);
+}
