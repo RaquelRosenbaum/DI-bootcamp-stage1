@@ -46,6 +46,7 @@ console.log(moreFruits);
         //     oranges - zeroth elem in apples
         // blueberries - elem 1 in banana
 // QUESTION FROM SUBMIT TEXT: so why isn't it [0,0,0]? Why doesn't banana as zeroth element of the array have to be the first index so there is 3 indexes?
+//Answer:  
 
 // From the lesson:
 // You can create an array within an array:
