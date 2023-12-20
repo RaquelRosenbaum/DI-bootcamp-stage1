@@ -257,3 +257,31 @@
 // console.log(c); // 21
 
 // for (let i = 0;; i++) { console.log("loop"); break; };
+
+// NOTES FROM CLASS:
+// debugging - better to do it in Chrome, the dev tools are better than anything you’ll find in VS Code
+
+// i++ == i=i+1
+
+// for (let i = 0; i < 11; i++) {
+// 	console.log(i);
+// 	}
+// the loop increases to 11 from 10, then checks condition i<11, then does not console.log - the loop ends in other words.
+
+// let colors = [“red”, “yellow”, “black”, “pink”]
+// for (let i = 0; i < 4; i++) {
+// 	console.log(i);
+// 	console.log(colors[i]);
+
+// but it needs to be more dynamic:
+
+// .length property gives us the length of the array and this is useful
+
+// dynamic loop:
+// let colors = [“red”, “yellow”, “black”, “pink”]
+// for (let i = 0; i < colors.length; i++) {
+// 	console.log(i);
+// 	console.log(colors[i]);
+
+// this is also useful because maybe the length of the array is changing all the time (people logging in and out)
+

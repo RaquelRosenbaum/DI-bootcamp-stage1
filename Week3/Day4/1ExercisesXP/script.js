@@ -102,12 +102,11 @@
 //     if (users.length===0) {   
 //             console.log("no one is online");}
 //         else if (users.length===1){
-//             console.log(users[0].userName+" is online.")}
+//             console.log(users[0].userName+" is online.");}
 //         else if (users.length===2){
-//             for (var userName of users) {
-//             console.log(users[0].userName+" and "+users[1].userName+" are online.");}}
-//         else (users.length>2);{
-//             console.log(users[0].userName+", "+users[1].userName+","+" and "+((users.length)-2)+" more are online");}
+//             console.log(users[0].userName+" and "+users[1].userName+" are online.");}
+//         else (users.length>2) 
+//             console.log(users[0].userName+", "+users[1].userName+","+" and "+((users.length)-2)+" more are online");
 
 // HOT DIGGITY (deletedExplitive) I DID IT!!!!!!!!!
 
