@@ -30,7 +30,7 @@
 //     console.log(today)
 
 //     let date1 = new Date(2019, 10, 4); // 2019-11-04 
-//     console.log(date1) //The month is zero-index. Day and year are not. 
+//     console.log(date1); //The month is zero-index. Day and year are not. 
 
     // You can set a new date relative to another date object:
 //     let date2 = new Date();
@@ -42,30 +42,35 @@
 
 // When working with arrays, it’s far better to use a built-in Array method than a for-loop. But not all array methods are loop-like. So I included only the ones that are relevant to working with iterating lists of values.
 
-// You can show the difference between dates, displayed in milliseconds. let d3 = date2 - date1.
-// To then show that difference converted to days by declaring d3 = d3 / (1000 * 60 * 60 *24).
-
-// i++ == i=i+1
+// You can show the difference between dates, displayed in milliseconds. 
+// let d3 = (date2 - date1);
+// console.log(d3);
+// // To then show that difference converted to days by declaring 
+// d3 = d3 / (1000 * 60 * 60 *24);
+// console.log(d3);
+// // i++ == i=i+1
 
 // for (let i = 0; i < 11; i++) {
 // 	console.log(i);
 // 	}
 // the loop increases to 11 from 10, then checks condition i<11, then does not console.log - the loop ends in other words.
 
-// let colors = [“red”, “yellow”, “black”, “pink”]
-// for (let i = 0; i < 4; i++) {
-// 	console.log(i);
-// 	console.log(colors[i]);
+// DOESN'T WORK/Buggy:
+// let colors = ["red", "yellow”, “black”, “pink”]
+//         for (let i = 0; i < 4; i++) {
+// 	console.log(i)
+// 	console.log(colors[i])}
 
 // but it needs to be more dynamic:
 
 // .length property gives us the length of the array and this is useful
 
 // dynamic loop:
-// let colors = [“red”, “yellow”, “black”, “pink”]
-// for (let i = 0; i < colors.length; i++) {
+// Also Buggy:
+// let colors = ["red”, “yellow”, “black”, "pink"];
+//      for (let i = 0; i < colors.length; i++) {
 // 	console.log(i);
-// 	console.log(colors[i]);
+// 	console.log(colors[i]);}
 
 // this is also useful because maybe the length of the array is changing all the time (people logging in and out)
 
@@ -83,19 +88,22 @@
         // shearit is remainder in hebrew - modulo
 
 // FOR IN LOOPS (objects only):
-            // always used when we loop through an object
+// always used when we loop through an object
+
 // let person = {
 //     fname: "John",
 //     lname: "Doe",
 //     age: 25,
 // };
 
-// for (let key in person) {
-//     console.log(person[key]);
-//         }
-       
-// console.log(person.lname);
- // We do the following and the person[key] above because we get a string back from a previous step, so need to access it as an Object.  person.lname gets us an index
+// for (let x in person) {
+//     console.log(x);
+//     console.log(person);
+//     console.log(person[x]);
+// }
+ 
+// We do the following and the person[x] above because we get a string back from a previous step, so need to access it as an Object.  person[x] gets us an index
+
 // console.log(person["lname"]);
 
 // For / Of Looping thru array or strings:
@@ -108,7 +116,7 @@
 
 // iterate over multiple objects in an array - a loop inside a loop
 
-// let myArray=[
+// const myArray=[
 // {
 //     fname: "John",
 //     lname: "Doe",
@@ -130,7 +138,7 @@
 //     age: 29,
 // },];
 
-// for (let element of myArr) {
+// for (let element of myArray) {
 //     console.log("start of arr element");
 //     for (let key in element){
 //         console.log(element[key]);
@@ -143,15 +151,16 @@
 // let n = 0;
 // while (n<3) {
 //     n++;
-//     console.log(n)
-// }
+//     console.log(n)}
+
 // zero doesn't appear because first n++ goes before console.log(n) goes
 
 // 2nd example:
 // let username=prompt("please enter username");
 // while (username != "admin") {
-//     username=prompt("please enter CORRECT username)
+//     let username=prompt("please enter CORRECT username");
 // }
+
 // console.log("welcome")
 
 // 3rd example:
@@ -163,10 +172,11 @@
 // do{
 //     username = prompt("enter username");
 // }   while (username !=="admin");
+//         break;
 
 // do while executes code block at least once, first do at least once, then check condition
 
-// break
+   
 
 // for(let i=0; i<10; i++) {
 //     console.log("before if statement");
@@ -178,28 +188,38 @@
 // };
 
 // continue doesn't break out of loop, just skips to the next iteration
-// for (leti=0; i<10; i++_ {
+// for (let i = 0; i < 10; i++) {
 //     if(i===3 || i === 7 || i === 8) {
-        //continue skips the current iteration
+        // continue skips the current iteration
 //         continue;
 //     }
 //     console.log("the number is " + i); //0123456789");
-// };
+// }
 
 // CLASS EXERCISE 2
-// #1:
-// let names=["john", "sarah", 23, "Rudolf", 34];
-// for (let name of names) {
-//     of!(i===string) {
-//         if (typeof name === "string"){
-//             if (name[0]!==name[0].toUpperCase())
-//                 {
-//                 name = name[0].toUpperCase()+name.slice(1);
-//             }
-//         }
-//         console.log(name);
-//     }
+// Instructions:
+// let names= ["john", "sarah", 23, "Rudolf",34]
+// 1. Write a JavaScript for loop that will go through the variable names.
 
+// if the item is not a string, pass.
+// if the item is a string, check if its first letter is in uppercase. If not, change it to uppercase and then display the name.
+// 2. Write a JavaScript for loop that will go through the variable names
+
+// if the item is not a string, go out of the loop.
+// if the item is a string, display it.
+
+// #1: 
+
+let names=["john", "sarah", 23, "Rudolf", 34];
+for (let name of names) {
+    if (i===string) {
+                continue;
+    if (names[0][0]===!string) {
+         names=names[0][0].toUpperCase;
+    console.log(names);
+    }
+}
+}
 // #2:
 // let names=["john", "sarah", 23, "Rudolf", 34];
 // for (let name of names) {
