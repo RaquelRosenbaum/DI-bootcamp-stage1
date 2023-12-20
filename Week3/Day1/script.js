@@ -211,3 +211,69 @@
 // let globalAddress=addressNumber+addressStreet+Country;
 // console.log("I live in "+addressStreet+"in "+Country);
 
+
+
+// Notes on first lecture:
+// tag to link to script.js file (placed at end of body)
+// <script src="script.js"></script>
+
+// console.log(“Hello World”);
+// first line of .js
+// 				on the right will be a link that tells you where this line came from
+
+// variables-
+// can’t start with number
+// can’t be a reserved word
+
+// names-
+// 	letters, numbers, underscores, dollar signs
+// 	MUST begin with letter
+// 	no hyphens
+// 	if multiple words - camel case convention - Cap first letter each word except for first word
+// 		dayOfTheMonth
+	
+// the let keyword
+// 	declare variable
+	
+// so we’re coding in VS the javascript and at the same time, as if we were building a website, looking at live server and the js console there instead of the other dev tools
+
+// you can declare (“let x, y”) and then define (“x=5+6”) or the other way around
+
+// if declared but not defined, get message in console “undefined”
+// 	let a;
+
+// semicolon at end of line of code needed
+
+// lorem (#words you want) = lorem ipsum paragraph
+
+// like in Python, 
+// 	property of length: 
+// 		console.log(longString.length)
+// 		method:  console.log(str.indexOf(“Hello”))
+// 			a method does something, a property is altready there
+// 			the “Hello” inside the parens is the thing that calls the method
+
+// remember that length there is no zero of course, whereas the index starts at 0 of course
+
+// if you add a string to a number it will concat them
+
+// some methods don’t take an argument in the parens
+// 	colors.pop()
+
+// splice - changes the original
+// 	colors.splice(1,1,”pink”) takes away the item at position one, and 	adds “pink” item to position 1
+
+// slice - creates new array, doesn’t change the array
+// 	let favorite=colors.slice(2);
+// 	let favorite=colors.slice(0,2); gives 2 items, the items at indices 0 and 1
+
+// let pets = [“cat”, “dog”, “fish, “rabbit”]
+// pets.splice(3,1,”horse);
+// console.log(pets);
+
+
+// don’t forget to put the instructions in a comment inside the code
+// put the exercises in the same js file unless later when we’re changing the index between exercises (the parts of the XP or daily challenge, 1. 2. 3. )
+
+// he will post the lesson file in the slack at the end of each class
+

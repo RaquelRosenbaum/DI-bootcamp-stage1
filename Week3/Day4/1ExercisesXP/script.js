@@ -75,35 +75,49 @@
 // For example, if there are 5 users, it should display:
 // name_user1, name_user2 and 3 more are online
 
-// ANSWER: FUNCTIONS CORRECTLY but places "-1 others are online" and "undefined online"
-// (OPTION WITHOUT USING OBJECTS INSIDE THE ARRAY):
+// ANSWER: FUNCTIONS CORRECTLY - OPTION WITHOUT USING OBJECTS INSIDE THE ARRAY:
 // const users=["Lea123","Princess45","doglovers","helooo@000"];
 // if (users.length===0) {   
 //     console.log("no one is online");}
 // else if (users.length===1){
 //     console.log(users[0]+" is online");}
 // else if (users.length===2){
-//     console.log(users[0]+users[1]+"is online");}
+//     console.log(users[0]+users[1]+"are online");}
 // else (users.length>2);{
 //     console.log(users[0]+", "+users[1]+","+" and "+((users.length)-2)+" more are online");}
 
-//users[0].user_name??
 
-// DOES NOT FUNCTION: (OPTION USING key/value properties inside an OBJECT which is nested inside INSIDE an ARRAY):
-const users=[
-    {userName:"Lea123"
-    password:503803},
-    {userName:"Princess45"
-    password:6658tg3803},
-    {userName:"doglovers"
-    password:45thjd3803},
-    {userName:"helooo@000"
-    password:5458903}];
-if (users.length=0) {   
-    console.log("no one is online");}
-else if (users.length===1){
-    console.log(users[0].userName+" is online");}
-else if (users.length===2){
-    console.log(users[0].userName+", "+users[1].userName+"is online");}
-else (users.length>2);{
-    console.log(users[0].userName+", "+users[1].userName+","+" and "+((users.length)-2)+" more are online");}
+// OPTION USING key/value properties inside an OBJECT nested inside INSIDE an ARRAY):
+// const users=[
+//     {userName: "Lea123",
+//     password: "503803"},
+//     {userName: "Princess45",
+//     password: "6658tg3803"},
+//     {userName: "doglovers", 
+//     password: "45thjd3803"},
+//     {userName: "helooo@000",
+//     password: "5458903"}
+//     ];
+
+//     if (users.length===0) {   
+//             console.log("no one is online");}
+//         else if (users.length===1){
+//             console.log(users[0].userName+" is online.")}
+//         else if (users.length===2){
+//             for (var userName of users) {
+//             console.log(users[0].userName+" and "+users[1].userName+" are online.");}}
+//         else (users.length>2);{
+//             console.log(users[0].userName+", "+users[1].userName+","+" and "+((users.length)-2)+" more are online");}
+
+// HOT DIGGITY (deletedExplitive) I DID IT!!!!!!!!!
+
+// Another example:
+// var people = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     { name: "Charlie", age: 35 }
+// ];
+
+// for (var person of people) {
+//     console.log("Name: " + person.name + ", Age: " + person.age);
+// }

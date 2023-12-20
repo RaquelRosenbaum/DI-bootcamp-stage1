@@ -27,7 +27,7 @@
 // function myAge(myAge) {
 //     let momAge = 2 * myAge;
 //     let dadAge = 1.2 * momAge;
-//     // return [mom,dad]
+    // return [mom,dad]
 //     return {
 //         momAge:momAge
 //         dadAge:dadAge
@@ -40,3 +40,16 @@
 // a function can be a key:value pair in an Object
 // object method - a function in an object
 // everything is an Object, even an Array, in actuality
+
+//the argument of the function is inside the parens when it is called - 
+//myAge(22);
+//the parameter is the specification inside the parens in the line instantiating the function - function myAge(age=40)
+
+//because we can call a string, or call an expression, calling an expression when we call the function is a way of specifying a new input, the argument  -
+
+// Example:
+// function square(number) {
+//     return number * number;
+// }
+// console.log(square(2));  the expression "square(2)"  is the argument that tells the function that doesn't have a parameter set.
+
