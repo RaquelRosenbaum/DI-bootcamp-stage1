@@ -65,7 +65,7 @@
 // console.log(str.substring(15));
 
 // let uppercaseString = "HELLO THIS IS AN INTENSE STRING";
-// // console.log(uppercaseString.length)
+// console.log(uppercaseString.length)
 // console.log(uppercaseString.toLowerCase());
 // let addressNumber = 19;
 // console.log(addressNumber);

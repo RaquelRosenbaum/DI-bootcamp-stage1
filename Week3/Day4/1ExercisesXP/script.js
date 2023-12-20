@@ -29,7 +29,6 @@
 // if it does, display ‘I love Chihuahuas, it’s my favorite dog breed’
 // else, console.log ‘I dont care, I prefer cats’
 
-
 // ANSWER: FUNCTIONS CORRECTLY        
 // let newDog="Chihuahhua";
 // console.log(newDog.length);
@@ -48,7 +47,7 @@
 // console.log(newerDog.toLowerCase);
 // console.log(newerDog);
 
-//  Exercise 3: Even Or Odd
+// Exercise 3: Even Or Odd
 // Instructions
 // Prompt the user for a number and save it to a variable.
 // Check whether the variable is even or odd.
@@ -77,7 +76,7 @@
 // name_user1, name_user2 and 3 more are online
 
 // ANSWER: FUNCTIONS CORRECTLY but places "-1 others are online" and "undefined online"
-// (OPTION WITHOUT USING USERNAME/PASS OBJECTS INSIDE THE ARRAY):
+// (OPTION WITHOUT USING OBJECTS INSIDE THE ARRAY):
 // const users=["Lea123","Princess45","doglovers","helooo@000"];
 // if (users.length===0) {   
 //     console.log("no one is online");}
@@ -90,13 +89,21 @@
 
 //users[0].user_name??
 
-// (OPTION USING USERNAME/PASS OBJECTS INSIDE THE ARRAY):
-// const users=[{"Lea123","Princess45"},{"doglovers"},{"helooo@000"}];
-// if (users.length=0) {   
-//     console.log("no one is online");}
-// else if (users.length=1){
-//     console.log(users[0].user_name+" is online");}
-// else if (users.length=2){
-//     console.log(users[0].user_name+, +users[1].user_name+"is online");}
-// else (users.length>2);{
-//     console.log(users[0].user_name+", "+users[1].user_name+","+" and "+((users.length)-2)+" more are online");}
+// DOES NOT FUNCTION: (OPTION USING key/value properties inside an OBJECT which is nested inside INSIDE an ARRAY):
+const users=[
+    {userName:"Lea123"
+    password:503803},
+    {userName:"Princess45"
+    password:6658tg3803},
+    {userName:"doglovers"
+    password:45thjd3803},
+    {userName:"helooo@000"
+    password:5458903}];
+if (users.length=0) {   
+    console.log("no one is online");}
+else if (users.length===1){
+    console.log(users[0].userName+" is online");}
+else if (users.length===2){
+    console.log(users[0].userName+", "+users[1].userName+"is online");}
+else (users.length>2);{
+    console.log(users[0].userName+", "+users[1].userName+","+" and "+((users.length)-2)+" more are online");}
