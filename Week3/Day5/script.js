@@ -209,24 +209,15 @@
 // if the item is a string, display it.
 
 // #1: 
-
-let names=["john", "sarah", 23, "Rudolf", 34];
-for (let name of names) {
-    if (typeof name!="string") {
-                continue;
-    let newName = name.charAt(0).toUpperCase() + name.slice(1);
-    console.log(newName);
-    }
-}
-
-// #2:
-// let names=["john", "sarah", 23, "Rudolf", 34];
+// WORKS, NO BUGS:
+// let names=["john", 23, "sarah", 45, "Rudolf"];
 // for (let name of names) {
-//     if (typeof name !== "string"){
-//         continue;
-//     }
-//     console.log(name);
-//     }
+//         if (typeof name != "string") { 
+//                 continue }
+//         let newName = name.charAt(0).toUpperCase()+name.slice(1);
+//         console.log(newName)}
+
+
 
 // FROM THE VIDEO ON LOOPS IN DI PLATFORM:
 
@@ -301,6 +292,4 @@ for (let name of names) {
 // for (let i = 0; i < colors.length; i++) {
 // 	console.log(i);
 // 	console.log(colors[i]);
-
-// this is also useful because maybe the length of the array is changing all the time (people logging in and out)
-
+// this is also useful because maybe the length of the array is changing all the time (people logging in and out

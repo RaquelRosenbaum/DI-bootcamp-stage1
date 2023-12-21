@@ -41,7 +41,7 @@
 
 // Create a variable called last which value is the last element of the array.
 // ********CAN'T FIND THIS*************
-// let last = people[people.length+1];
+// let last = people[(people.length)+1];
 // console.log(last);
 //  **************returns UNDEFINED on line 45*************
 
@@ -52,35 +52,22 @@
 // Using a loop, iterate through the people array and console.log each person.
 
 // const people = ["Greg", "Mary", "Devon", "James"];
-// let (i=0; i<4; i++)  {
+// for (let i=0; i<4; i++)  {
 //     console.log(people[i]);
-// }
-// const people = ["Greg", "Mary", "Devon", "James"];
-// for (let i = 0; i < 11; i++) {
-//     	console.log(people[i]);
 // }
 
 // Using a loop, iterate through the people array and exit the loop after you console.log “Devon” .
 // Hint: take a look at the break statement in the lesson.
 
+//DOESN"T WORK *********************************
 // const people = ["Greg", "Mary", "Devon", "James"];
-// for (let i = 0; i < people.length; i++) {
-//     console.log(people[i], "before if statement");{
-//         if (i ===3) {
+// for (let i = 0; i < 4; i++) {
+//     console.log(people[i]);{
+//         if (i = 2) {
 //             break;
 //             } 
-//             console.log((people[i]), "after if statement")
 //     }
 // }
-// THE ABOVE RETURNS:
-// Greg before if statement
-// script.js:72 Greg after if statement
-// script.js:68 Mary before if statement
-// script.js:72 Mary after if statement
-// script.js:68 Devon before if statement
-// script.js:72 Devon after if statement
-// script.js:68 James before if statement  
-//YAYYYYY!!!  
 
 // Exercise 2 : Your Favorite Colors
 // Instructions
@@ -90,15 +77,6 @@
 // Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 3rd choice”, picking the correct suffix for each number.
 // Hint : create an array of suffixes to do the Bonus
 
-// STARTING POINT (NOT AN ANSWER):
-// let colors = ["brown", "green", "beige", "brown-mustard yellow", "obergine"];
-// for (let i = 0; i < colors.length; i++) {
-//     console.log("My #1 choice is "+colors[0]);
-//     console.log("My #2 choice is "+colors[1]);
-//     console.log("My #3 choice is "+colors[2]);
-//     console.log("My #4 choice is "+colors[3]);
-//     console.log("My #5 choice is "+colors[4]);
-// }
 
 // NEEDS WORK ******************* THIS IS THE ANSWER):
 // let colors = ["brown", "green", "beige", "brown-mustard yellow", "obergine"];
@@ -117,10 +95,10 @@
 // While the number is smaller than 10 continue asking the user for a new number.
 // Tip : Which while loop is more relevant for this situation?
 
-// AN ATTEMPT:
-// var num1 = prompt("Please enter a number");
-// let (for i = 0; i < 10; i++) {
-//     while (typeof num1 !== “number”) {
+// DOESN"T WORK: ****************************
+// const num1 = prompt("Please enter a number");
+// let (for num1 = 0; num1 < 10; num1++) {
+//     while (typeof num1 != number) {
 //         alert("Not a number, please enter another number");
 //     }
 // }
@@ -157,9 +135,11 @@ console.log(building.numberOfAptByFloor.firstFloor,building.numberOfAptByFloor.t
 
 // Console.log the name of the second tenant and the number of rooms he has in his apartment.
 
-console.log(building.nameOfTenants[1],building.numberOfRoomsAndRent[1,0]);
+let dansrooms=building[0][3].dan.[0];
+console.log(dansrooms);
 
 // Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
+
 
 
 // 🌟 Exercise 5 : Family
@@ -201,16 +181,16 @@ console.log(building.nameOfTenants[1],building.numberOfRoomsAndRent[1,0]);
 
 
 // another example from class:
-let x = 0 
-while(x<4){
-    x++
-    console.log("while",x);
-}
-// AND:
+// let x = 0 
+// while(x<4){
+//     x++
+//     console.log("while",x);
+// }
+// // AND:
 
-let x=0;
-do {
-    x++;
-    console.log("do",x);
-}
-while(x<0);
+// let x=0;
+// do {
+//     x++;
+//     console.log("do",x);
+// }
+// while(x<0);
