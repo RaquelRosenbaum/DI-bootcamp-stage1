@@ -45,10 +45,10 @@
 // You can show the difference between dates, displayed in milliseconds. 
 // let d3 = (date2 - date1);
 // console.log(d3);
-// // To then show that difference converted to days by declaring 
+// To then show that difference converted to days by declaring 
 // d3 = d3 / (1000 * 60 * 60 *24);
 // console.log(d3);
-// // i++ == i=i+1
+// i++ == i=i+1
 
 // for (let i = 0; i < 11; i++) {
 // 	console.log(i);
@@ -212,14 +212,13 @@
 
 let names=["john", "sarah", 23, "Rudolf", 34];
 for (let name of names) {
-    if (i===string) {
+    if (typeof name!="string") {
                 continue;
-    if (names[0][0]===!string) {
-         names=names[0][0].toUpperCase;
-    console.log(names);
+    let newName = name.charAt(0).toUpperCase() + name.slice(1);
+    console.log(newName);
     }
 }
-}
+
 // #2:
 // let names=["john", "sarah", 23, "Rudolf", 34];
 // for (let name of names) {
