@@ -110,13 +110,3 @@
 
 // HOT DIGGITY (deletedExplitive) I DID IT!!!!!!!!!
 
-// Another example:
-// var people = [
-//     { name: "Alice", age: 25 },
-//     { name: "Bob", age: 30 },
-//     { name: "Charlie", age: 35 }
-// ];
-
-// for (var person of people) {
-//     console.log("Name: " + person.name + ", Age: " + person.age);
-// }
