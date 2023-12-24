@@ -1,6 +1,8 @@
+The official submission is what is not commented out below, the rest is notes to myself and process
+
 // MY FUTILE FIRST ATTEMPT (the experienced programmer took 45 minutes of thrashing around to produce the code below from video, however it was invaluable watching it, to pick through it, understand each phase of its development, taking valuable notes).  But I had to find another way to gain the most from this exercise, so I analyzed and then played monkey see monkey do, since I couldn't on my own or with Google produce the whole product without eventually seeing the answer.
 // ________________________
-// MY ATTEMPT:
+// My First Attempt:
 // function playTheGame() {
 //     let yesnoplay = confirm("Do you want to play the game?")
 //         if false {
@@ -102,7 +104,7 @@
 // ________________________
 MONKEY SEE MONKEY DO:  NOW FROM MEMORY TRY TO REPRODUCE WHILE JUST LOOKING AT INSTRUCTIONS:
     I changed it to try to use the compareNumber function instead of using the elements of that inside the while statement in the main function, but that was impossible.
-DOESN"T FUNCTION -the problem is in the indentation of and order of the statements inside and outside the while loop-  I thrashed around for another two hours, ended up with essentially verbatim what the guy in the video did (I tested his code, it worked) but reproducing it and then checking that it was the same after I couldn't make my remembered version work also didn't work.  
+DOESN"T FUNCTION -the problem is in the indentation of and order of the statements inside and outside the while loop-  I thrashed around for another two hours, ended up with essentially verbatim what the guy in the video did, I tested his code, it worked, but reproducing it and then checking that it was the same after I couldn't make my remembered version work also didn't work.  
 
     function playTheGame() {
     
@@ -130,7 +132,5 @@ function isOnlyNumbers(str) {
     return regex.test(str)}
 function isBetw0and10(number) {
     return number >= 0 && number <=10}
-
-
 
 // The goal is to walk in to a coding interview 7 months from now and without searching anything, without copy/paste of templates from the your own stock of templates or the internet, have the in-depth understanding to identify the patterns and typical use cases and then cold code – therefore hopefully passing the interview.  To do what the guy in the video did, in other words.
