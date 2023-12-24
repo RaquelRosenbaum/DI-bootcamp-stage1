@@ -37,42 +37,44 @@
 // ________________________
 // VERSION FROM VIDEO:
 
-function playTheGame() {
-    const isUserReady = confirm("Do you want to play?")
-    if (!isUserReady) return alert ("No problem, Goodbye") 
-                // if isUserReady is false, user pressed the cancel button instead of yes button in prompt box
-    let answer = prompt("Enter a number between 0 and 10")
-    let numberOfTries = 0;
-    const computerNumber = generateRandomNumber()
-    while (Number(answer) != computerNumber) {
-        numberOfTries = numberOfTries + 1
-        if (numberOfTries === 3) return alert("Sorry, too many tries. The number was "+computerNumber)
-        if (!isOnlyNumbers(answer)) return alert("Sorry not a number, Goodbye");
-        if(!isBetweenZeroAndTen(Number(answer))) return alert("Sorry it's not a good number, Goodbye")
+// function playTheGame() {
+//     const isUserReady = confirm("Do you want to play?")
+//     if (!isUserReady) return alert ("No problem, Goodbye") 
+//                 // if isUserReady is false, user pressed the cancel button instead of yes button in prompt box
+//     let answer = prompt("Enter a number between 0 and 10")
+//     let numberOfTries = 0;
+//     const computerNumber = generateRandomNumber()
+//     while (Number(answer) != computerNumber) {
+//         numberOfTries = numberOfTries + 1
+//         if (numberOfTries === 3) return alert("Sorry, too many tries. The number was "+computerNumber)
+//         if (!isOnlyNumbers(answer)) return alert("Sorry not a number, Goodbye");
+//         if(!isBetweenZeroAndTen(Number(answer))) return alert("Sorry it's not a good number, Goodbye")
         
-        let biggerOrSmaller = (Number(answer) > computerNumber) ? "bigger" : "smaller"
-        alert("Your number is " + biggerOrSmaller + "than the computer's, guess again")
-    answer = prompt("Enter another number")
-    }
-    const finalMessage = `WINNER!  The number was indeed ${computerNumber}.  You found in ${numberOfTries + 1} tries.`
-    alert(finalMessage);
-    }
+//         let biggerOrSmaller = (Number(answer) > computerNumber) ? "bigger" : "smaller"
+//         alert("Your number is " + biggerOrSmaller + "than the computer's, guess again")
+//     answer = prompt("Enter another number")
+//     }
+//     const finalMessage = `WINNER!  The number was indeed ${computerNumber}.  You found in ${numberOfTries + 1} tries.`
+//     alert(finalMessage);
+//     }
 
-function isOnlyNumbers(str) {
-    const regex = new RegExp(/^[0-9]*$/)
-    return regex.test(str)
-    }
+// function isOnlyNumbers(str) {
+//     const regex = new RegExp(/^[0-9]*$/)
+//     return regex.test(str)
+//     }
 
-function isBetweenZeroAndTen(number) {
-    return number >= 0 && number <= 10
-    }
-function generateRandomNumber() {
-    return Math.floor(Math.random() * 11)
-    }
+// function isBetweenZeroAndTen(number) {
+//     return number >= 0 && number <= 10
+//     }
+// function generateRandomNumber() {
+//     return Math.floor(Math.random() * 11)
+//     }
 
 // ________________________
 // NOTES ON VIDEO:  Things to review often
-// He used `${}` (Javascript template literal) to avoid concatenation and this is important as it turns out because each + (therefore concat) in the Winner alert statement turns it back into a string.  
+// He used `${}` (Javascript template literal) to avoid concatenation and this is important as it turns out because each + (therefore concat) in the Winner alert statement turns it back into a string.   Remember the tics - ` - go around the entire quote not just the template literal bits.
+
+//The winner statement gives the number of tries plus 1 because of course the computer is counting from zero, so if they guessed in one try it will say they got it in 0 tries, hence +1.  
 
 //it's very important to put return after an if statement, where that is an exit point from the function, otherwise the other prompts will continue asking them and the function will continue.
 
@@ -83,7 +85,8 @@ function generateRandomNumber() {
 //remember prompt will always return string even if you tried to coerce a number with specifying the parameter as a number 
     // function whatever(number)
     //so you must coerce the input to be a number and then check it with the regExp
-    //number(answer)
+    //Number(answer)  //this is uppercase N in Number - number throws error
+
 
 //Math.random won't get that upper limit you set so if you are using round anyway, set the upper limit to 1 greater than what you need (in this case 11) 
 //It's *11 on the function generateRandomNumber because? 
@@ -95,37 +98,39 @@ function generateRandomNumber() {
 // This: let biggerOrSmaller = (Number(answer) > computerNumber) ? "bigger" : "smaller"
     //is a ternary operator - kind of takes the place of an if else statement set.  if the answer is bigger than computerNumber insert the word "bigger".  Else insert the word after the colon, "smaller" THe ? is an operator for this
 
-//The winner statement gives the number of tries plus 1 because of course the computer is counting from zero, so if they guessed in one try it will say they got it in 0 tries, hence +1
 
 // ________________________
-//MONKEY SEE MONKEY DO:  NOW FROM MEMORY TRY TO REPRODUCE WHILE JUST LOOKING AT INSTRUCTIONS:
-    // I changed it to try to use the compareNumber function instead of using the elements of that inside the while statement in the main function
-function playTheGame() {
-    let numberOfTries = 0;
+MONKEY SEE MONKEY DO:  NOW FROM MEMORY TRY TO REPRODUCE WHILE JUST LOOKING AT INSTRUCTIONS:
+    I changed it to try to use the compareNumber function instead of using the elements of that inside the while statement in the main function, but that was impossible.
+DOESN"T FUNCTION -the problem is in the indentation of and order of the statements inside and outside the while loop-  I thrashed around for another two hours, ended up with essentially verbatim what the guy in the video did (I tested his code, it worked) but reproducing it and then checking that it was the same after I couldn't make my remembered version work also didn't work.  
+
+    function playTheGame() {
+    
     const isUserReady = confirm("Would you like to play the game?");
         if (!isUserReady) return alert("No problem, Goodbye");
-    const userNumber = prompt("Please enter a number between 0 and 10");  
-    const computerNumber = generateNumber();
-        while userNumber != computerNumber {
-            numberOfTries += 1;
+    let userNumber = prompt("Please enter a number between 0 and 10");  
+    let numberOfTries = 0
+    const computerNumber = generateNumber()
+        while (Number(userNumber) !== computerNumber) {
+            numberOfTries = numberOfTries + 1
+            if (numberOfTries === 3) return alert("You used your 3 Chances, you lost the game, the number was "+computerNumber);
             if (!isOnlyNumbers(userNumber)) return alert("Sorry not a number, Goodbye");
-            if (!isBetw0and10(number(userNumber))) return alert("Sorry it's not a number between 0 and 10, Goodbye");
-            if numberOfTries === 3 return alert("You used your 3 Chances, you lost the game")
-            function compareNumbers(userNumber,computerNumber) {
-                if userNumber > computerNumber return alert("Your number is bigger than the computer's, guess again");
-                if userNumber < computerNumber return alert("Your number is smaller than the computer's, guess again");
-                if userNumber === computerNumber return alert("Winner!");
-        alert("Please enter another number")
+            if (!isBetw0and10(Number(userNumber))) return alert("Sorry it's not a number between 0 and 10, Goodbye")
+            if (Number(userNumber) === computerNumber) return alert(`Winner! Your answer was correct, the computer's number was ${computerNumber}.  You made it in ${numberOfTries} times`)
+            if (Number(userNumber) > computerNumber) return alert("Your number is bigger than the computer's, guess again")
+            userNumber = prompt("Please enter another number")
+            if (Number(userNumber) < computerNumber) return alert("Your number is smaller than the computer's, guess again")
+            userNumber = prompt("Please enter another number")
         }}
 
 function generateNumber() {
-    return math.round(math.random()*11);}  
+    return Math.floor(Math.random()*11)}  //that's uppercase M
 function isOnlyNumbers(str) {
-    const regex = new RegExp(/^[0-9]*$/);
-    return regex.text(str);}
+    const regex = new RegExp(/^[0-9]*$/)
+    return regex.test(str)}
 function isBetw0and10(number) {
-    return number >= 0 && number <=10;}
+    return number >= 0 && number <=10}
 
-}
 
-// The goal is to walk in to a coding interview 7 months from now and without searching anything, without copy/paste of templates from the internet, have the in-depth understanding to identify the patterns and typical use cases and then cold code – therefore passing the interview.  Do what the guy in the video did, in other words.
+
+// The goal is to walk in to a coding interview 7 months from now and without searching anything, without copy/paste of templates from the your own stock of templates or the internet, have the in-depth understanding to identify the patterns and typical use cases and then cold code – therefore hopefully passing the interview.  To do what the guy in the video did, in other words.
