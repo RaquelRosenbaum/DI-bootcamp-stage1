@@ -139,3 +139,25 @@ function BottlesBeerWall99() {
   
 // I can understand the example I got from the Internet, but coming up with it?  It looks a lot simpler and more elegant than the convoluted solution that the esteemed gentleman on the video came up with after 45 minutes of Work, and simpler to understand, but... Maybe we can talk through this in class, to see at our level how we might have come up with either of these examples?  
 
+// Solution from Ziv in class (endless loop and doesn't do what assignment asks, DON'T implement will crash browser):
+
+// let i = 99;
+// let num = 1;
+
+// while (i> 0) {
+//     console.log(i + " bottles of beer on the wall");
+//     console.log(i + " bottles of beer");
+// }
+// i = i - num;
+// if(i<0) {
+//     console.log("Take " + (num  + i)+ " down, pass it around");
+//     console.log(0+" bottles of beer on the wall");
+// }
+// else if(num === 1) {
+//     console.log("Take " + num + " down, pass it around");
+// } else {
+//     console.log("Take " + num + " down, pass it around");
+// }
+
+// num++;
+
