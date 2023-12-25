@@ -1,4 +1,4 @@
-The assignment is impossible for us to come up with on our own at this level of the class- I see it as an opportunity to learn more use cases, but completing this assignment on my own even with help from the internet or the video was impossible and would be for anyone in the class (we are not presumed to have any programming background).  That's fine if the expectation is that what we are submitting here is essentially our attempt, then understanding the solution and learning new patterns and use cases from it.  What is the expectation?  Can we talk about that in class?
+// The assignment is impossible for us to come up with on our own at this level of the class- I see it as an opportunity to learn more use cases, but completing this assignment on my own even with help from the internet or the video was impossible and would be for anyone in the class (we are not presumed to have any programming background).  That's fine if the expectation is that what we are submitting here is essentially our attempt, then understanding the solution and learning new patterns and use cases from it.  What is the expectation?  Can we talk about that in class?
 
 
 // Instructions
@@ -57,25 +57,34 @@ The assignment is impossible for us to come up with on our own at this level of 
 // For 1 bottle, you pass “it” around.
 // For more than one bottle, you pass “them” around.
 
-MY ATTEMPT (futile though it be):
+// MY ATTEMPT 
 function BottlesBeerWall99() {
     const inpBottNumStrt = (Number(prompt("At what number bottle do you want to start the song? (1-99)")));
     if (isNaN(inpBottNumStrt)) {
         return alert("Sorry that is not a number, Goodbye")
         }
-    else {continue;}
     const bottleNumber = inpBottNumStrt;
-    return alert(`We start the song at ${inpBottNumStrt} bottles.`) 
-    bottleNumber -= 1;
-    return alert(`Take 1 down, pass it around, we have now ${bottleNumber} bottles on the wall`);
-    return alert(`We now have ${inpBottNumStrt} bottles on the wall`)
-    if (bottleNumber === 1) {
-        return alert(`Take 1 down, pass it around, we have now ${bottleNumber} bottle on the wall`)
-    }
-    if (bottleNumber === 0) {
-        return alert(`Take 1 down, pass it around, we have now no bottles on the wall`)
-    }
-}
+    console.log(`We start the song at ${bottleNumber} bottles.`) //this alert goes before the loop, bottleNumber not decreased yet
+    let bottleNumber = i;
+    for (i = num; i > 0; i--) {
+        //it then iterates once to decrease the number
+        console.log(`Take 1 down, pass it around, ${bottleNumber} bottles on the wall`);//then this alert is given
+        bottleNumber= bottleNumber - 1  //it iterates again
+        console.log(`${bottleNumber} bottles of beer on the wall, ${bottleNumber} bottles of beer.`);  
+        //bottlenumber is now one less than the previous console.log, in this entire sentence.
+        
+        //then loop and the console.logs associated with it start over
+
+        if (bottleNumber === 1) { //when bottleNumber gets to 1, it implements this conditional
+        console.log(`Take 1 down, pass it around, one bottle of beer on the wall`)
+        }
+        if (bottleNumber === 0) {//when bottleNumber gets to 0, it implements this conditional
+        console.log(`Take 1 down, pass it around, zero bottles of beer on the wall`)
+        }
+}}
+BottlesBeerWall99();
+
+
 
 // VERSION IN VIDEO:
 
@@ -130,14 +139,8 @@ function BottlesBeerWall99() {
 //       console.log(`${i - 1 === 0 ? 'No more' : i - 1} ${nextBottle} of beer on the wall\n`);
 //     }
 //   }
-  
-//   // Prompt the user for a number to begin counting down bottles
-//   const startingBottles = parseInt(prompt('Enter the number of bottles to start the song:'), 10);
-  
-//   // Call the function with the user's input
-//   bottlesOfBeer(startingBottles);
-  
-// I can understand the example I got from the Internet, but coming up with it?  It looks a lot simpler and more elegant than the convoluted solution that the esteemed gentleman on the video came up with after 45 minutes of Work, and simpler to understand, but... Maybe we can talk through this in class, to see at our level how we might have come up with either of these examples?  
+// bottlesOfBeer(34);
+ 
 
 // Solution from Ziv in class (endless loop and doesn't do what assignment asks, DON'T implement will crash browser):
 
