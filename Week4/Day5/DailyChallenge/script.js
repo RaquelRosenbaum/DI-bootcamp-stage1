@@ -58,30 +58,40 @@
 // For more than one bottle, you pass “them” around.
 
 // MY ATTEMPT 
+
+// I got really close, where it was decreasing appropriately and looping however many times it needed to, and the only problem was it wasn't decreasing to zero, but I can't get back to that state. 3 hours wasted thrashing around with tiny changes.  With ArcGIS (truly ANCIENT backend) we used to say, "don't start down the path of guessing, you'll end up thinking it worked because you were standing on one leg and jumped 3 times"
+
 function BottlesBeerWall99() {
-    const inpBottNumStrt = (Number(prompt("At what number bottle do you want to start the song? (1-99)")));
-    if (isNaN(inpBottNumStrt)) {
+    const bottleNumber = (Number(prompt("At what number bottle do you want to start the song? (1-99)")));//prompt user for starting bottleNumber
+    if (isNaN(bottleNumber)) { //check that it's a number not string so can be used in operations
         return alert("Sorry that is not a number, Goodbye")
         }
-    const bottleNumber = inpBottNumStrt;
-    console.log(`We start the song at ${bottleNumber} bottles.`) //this alert goes before the loop, bottleNumber not decreased yet
-    let bottleNumber = i;
-    for (i = num; i > 0; i--) {
-        //it then iterates once to decrease the number
-        console.log(`Take 1 down, pass it around, ${bottleNumber} bottles on the wall`);//then this alert is given
-        bottleNumber= bottleNumber - 1  //it iterates again
-        console.log(`${bottleNumber} bottles of beer on the wall, ${bottleNumber} bottles of beer.`);  
-        //bottlenumber is now one less than the previous console.log, in this entire sentence.
+    console.log(`We start the song at ${bottleNumber} bottles.  ${bottleNumber} bottles of beer on the wall, ${bottleNumber} bottles of beer,`) 
+    //this first sentence of the song goes before the loop, bottleNumber not decreased yet
+    
+    for (let i = bottleNumber; i < 99; i--) {  //I need it to iterate until it's = 0.
+        i = i - 1;// why isn't the i-- enough?
+        if (i = 1) { //when i gets to 1, it implements this conditional
+            console.log(`Take one, down, pass it around, 0 bottles of beer on the wall.`);
+            return
+            } 
+        if (i = 0) { //IT NEVER ARRIVES to 0 to implement this conditional even if I try i=0 above
+            console.log(`Now we've crashed this annoying song, and we've crashed the browser, da, da da, da da, da da,`);
+            return
+            } 
+        console.log(`Take 1 down, pass it around,`); //also tried putting all these together in one, starting with "take one down"
+        console.log(`${i} bottles of beer on the wall.`); 
+        console.log(`${i}) bottles of beer on the wall`); 
+        console.log(`${i} bottles of beer,`);
         
-        //then loop and the console.logs associated with it start over
+        //I tried while or if conditionals, didn't work
+        //THIS WON"T ITERATE even with console.lot inside while or if statement (tearing hair out)
+        //the words "take one down" are the event to signify when the decrease needs to happen
+        
+        //Why doesn't the loop just iterate a bunch of times before it gets around to the console.logs?  It's an engine running in the background, after all.  What's stopping it from iterating all the way to 1 (until it crashes into the conditionals below) before the first console log? 
 
-        if (bottleNumber === 1) { //when bottleNumber gets to 1, it implements this conditional
-        console.log(`Take 1 down, pass it around, one bottle of beer on the wall`)
-        }
-        if (bottleNumber === 0) {//when bottleNumber gets to 0, it implements this conditional
-        console.log(`Take 1 down, pass it around, zero bottles of beer on the wall`)
-        }
-}}
+        // why couldn't I replace i with bottlenumber?  I tried and it didn't work
+    }}
 BottlesBeerWall99();
 
 
