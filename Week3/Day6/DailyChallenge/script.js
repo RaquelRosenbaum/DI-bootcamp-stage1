@@ -12,8 +12,8 @@
 // HAD TO WATCH VIDEO AND OTHER SOURCES GIVEN FOR ASSIGNMENT BUT FOUND A DIFFERENT WAY TO DO IT ALSO, remembered "repeat" method from material on ES6:
 
 // Single Loop:
-// let stars= "🌟"
-//     for (let i = 1; i<7; i++) console.log(stars.repeat(i));
+let stars= "🌟"
+    for (let i = 1; i<7; i++) console.log(stars.repeat(i));
     
 // Nested Loop from Solution on video:
 // for (let i = 0; i < 6; i++){
@@ -23,12 +23,12 @@
 //         dispStrs = dispStrs + "🌟"
 //     }
 //     console.log(dispStrs)
-// }
-//Solution shown in class:
-// for(let i = 0; i <= 6; i++) {
-//         let star = ""
-//         for(let x=0; x<i; x++) {
-//                 star += "*"; //this is star = star + "*"
-//         }
-//         console.log(star);
-// }
+}
+Solution shown in class:
+for(let i = 0; i <= 6; i++) {
+        let star = ""
+        for(let x=0; x<i; x++) {
+                star += "*"; //this is star = star + "*"
+        }
+        console.log(star);
+}

@@ -100,37 +100,94 @@ The official submission is what is not commented out below, the rest is notes to
 // This: let biggerOrSmaller = (Number(answer) > computerNumber) ? "bigger" : "smaller"
     //is a ternary operator - kind of takes the place of an if else statement set.  if the answer is bigger than computerNumber insert the word "bigger".  Else insert the word after the colon, "smaller" THe ? is an operator for this
 
-
 // ________________________
-MONKEY SEE MONKEY DO:  NOW FROM MEMORY TRY TO REPRODUCE WHILE JUST LOOKING AT INSTRUCTIONS:
-    I changed it to try to use the compareNumber function instead of using the elements of that inside the while statement in the main function, but that was impossible.
-DOESN"T FUNCTION -the problem is in the indentation of and order of the statements inside and outside the while loop-  I thrashed around for another two hours, ended up with essentially verbatim what the guy in the video did, I tested his code, it worked, but reproducing it and then checking that it was the same after I couldn't make my remembered version work also didn't work.  
+// MONKEY SEE MONKEY DO:  NOW FROM MEMORY TRY TO REPRODUCE WHILE JUST LOOKING AT INSTRUCTIONS:
+//     I changed it to try to use the compareNumber function instead of using the elements of that inside the while statement in the main function, but that was impossible.
+// DOESN"T FUNCTION -the problem is in the indentation of and order of the statements inside and outside the while loop-  I thrashed around for another two hours, ended up with essentially verbatim what the guy in the video did, I tested his code, it worked, but reproducing it and then checking that it was the same after I couldn't make my remembered version work also didn't work.  
 
-    function playTheGame() {
+//     function playTheGame() {
     
-    const isUserReady = confirm("Would you like to play the game?");
-        if (!isUserReady) return alert("No problem, Goodbye");
-    let userNumber = prompt("Please enter a number between 0 and 10");  
-    let numberOfTries = 0
-    const computerNumber = generateNumber()
-        while (Number(userNumber) !== computerNumber) {
-            numberOfTries = numberOfTries + 1
-            if (numberOfTries === 3) return alert("You used your 3 Chances, you lost the game, the number was "+computerNumber);
-            if (!isOnlyNumbers(userNumber)) return alert("Sorry not a number, Goodbye");
-            if (!isBetw0and10(Number(userNumber))) return alert("Sorry it's not a number between 0 and 10, Goodbye")
-            if (Number(userNumber) === computerNumber) return alert(`Winner! Your answer was correct, the computer's number was ${computerNumber}.  You made it in ${numberOfTries} times`)
-            if (Number(userNumber) > computerNumber) return alert("Your number is bigger than the computer's, guess again")
-            userNumber = prompt("Please enter another number")
-            if (Number(userNumber) < computerNumber) return alert("Your number is smaller than the computer's, guess again")
-            userNumber = prompt("Please enter another number")
-        }}
+//     const isUserReady = confirm("Would you like to play the game?");
+//         if (!isUserReady) return alert("No problem, Goodbye");
+//     let userNumber = prompt("Please enter a number between 0 and 10");//should be inside the while loop  
+//     let numberOfTries = 0
+//     const computerNumber = generateNumber()
+//         while (Number(userNumber) !== computerNumber) {//should be while (numberOfTries < 3) {
+//             numberOfTries = numberOfTries + 1  //should be numberOfTries++;
+//             if (numberOfTries === 3) return alert("You used your 3 Chances, you lost the game, the number was "+computerNumber);
+//             if (!isOnlyNumbers(userNumber)) return alert("Sorry not a number, Goodbye");
+//             if (!isBetw0and10(Number(userNumber))) return alert("Sorry it's not a number between 0 and 10, Goodbye")
+//             if (Number(userNumber) === computerNumber) return alert(`Winner! Your answer was correct, the computer's number was ${computerNumber}.  You made it in ${numberOfTries} times`)
+//             if (Number(userNumber) > computerNumber) return alert("Your number is bigger than the computer's, guess again")
+//             userNumber = prompt("Please enter another number")
+//             if (Number(userNumber) < computerNumber) return alert("Your number is smaller than the computer's, guess again")
+            
+//             userNumber = prompt("Please enter another number") //not needed
+//         }}
 
-function generateNumber() {
-    return Math.floor(Math.random()*11)}  //that's uppercase M
-function isOnlyNumbers(str) {
-    const regex = new RegExp(/^[0-9]*$/)
-    return regex.test(str)}
-function isBetw0and10(number) {
-    return number >= 0 && number <=10}
+// function generateNumber() {
+//     return Math.floor(Math.random()*11)}  //that's uppercase M
+// function isOnlyNumbers(str) {
+//     const regex = new RegExp(/^[0-9]*$/) //"new ReGExp" not needed
+//     return regex.test(str)}
+// function isBetw0and10(number) {
+//     return number >= 0 && number <=10}
+// //need to call the function at the end:
+// playTheGame();    
 
 // The goal is to walk in to a coding interview 7 months from now and without searching anything, without copy/paste of templates from the your own stock of templates or the internet, have the in-depth understanding to identify the patterns and typical use cases and then cold code – therefore hopefully passing the interview.  To do what the guy in the video did, in other words.
+
+//Solution from Daniel:
+
+function playTheGame() {
+    const isUserReady = confirm("Would you like to play the game?");
+
+    if (!isUserReady) {
+        return alert("No problem, Goodbye");
+    }
+
+    let numberOfTries = 0;
+    const computerNumber = generateNumber();
+
+    while (numberOfTries < 3) {
+        let userNumber = prompt("Please enter a number between 0 and 10");
+
+        if (!isOnlyNumbers(userNumber)) {
+            return alert("Sorry not a number, Goodbye");
+        }
+
+        const userGuess = Number(userNumber);
+
+        if (!isBetw0and10(userGuess)) {
+            return alert("Sorry it's not a number between 0 and 10, Goodbye");
+        }
+
+        numberOfTries++;
+
+        if (userGuess === computerNumber) {
+            return alert(`Winner! Your answer was correct, the computer's number was ${computerNumber}. You made it in ${numberOfTries} tries`);
+        } else if (userGuess > computerNumber) {
+            alert("Your number is bigger than the computer's, guess again");
+        } else {
+            alert("Your number is smaller than the computer's, guess again");
+        }
+    }
+
+    return alert(`You used your 3 chances, you lost the game, the number was ${computerNumber}`);
+}
+
+function generateNumber() {
+    return Math.floor(Math.random() * 11);
+}
+
+function isOnlyNumbers(str) {
+    const regex = /^[0-9]*$/;
+    return regex.test(str);
+}
+
+function isBetw0and10(number) {
+    return number >= 0 && number <= 10;
+}
+
+// Call the function to start the game
+playTheGame();

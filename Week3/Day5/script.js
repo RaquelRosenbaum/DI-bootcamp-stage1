@@ -196,6 +196,12 @@
 //     console.log("the number is " + i); //0123456789");
 // }
 
+// Random notes:
+// canIuse.com
+// website for checking whether it works on all browsers
+
+// forEach is new javascript for loop
+
 // CLASS EXERCISE 2
 // Instructions:
 // let names= ["john", "sarah", 23, "Rudolf",34]

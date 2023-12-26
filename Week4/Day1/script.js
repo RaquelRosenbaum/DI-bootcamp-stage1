@@ -16,6 +16,9 @@
 //can't change const after declaring it, and it can't be an empty set
     // always capitalized by convention so everyone knows it's a const
 
+    // it’s better to have nested functions within a function rather than to have one function do many things
+
+    // My insight:  The more we want a website to be interactive, the more we need to use things like javascript to change the styling and even content automatically as the user is interacting with the website - so with DOM we are using DOM methods inside a javascript script, usually combined with functions, loops, etc. — in order to adjust the elements of the website in real time.  For example, we are coding the css to be different according to different conditions, but the statements we are making are a little different inside of Javascript when we do that.  Advantage is that the style can be dynamic, a part of the interaction between the user and the website.  Coding the website to be responsive to different devices is an analogy in a simplistic way - the margins and arrangement of the elements on the page changing according to need.  But with Javascript we can use a lot more complexity, like using functions, to get an impactful, striking user experience.  Animated icons are just the beginning.
 
 //EXERCISE 1 in class
 // 2. Write a Javascript function that takes a parameter: myAge
