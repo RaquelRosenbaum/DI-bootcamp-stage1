@@ -21,7 +21,7 @@
 // Hint
 // The number of stars that wraps the sentence, must depend on the length of the longest word.
 
-// ANSWER: includes centering each word
+// ANSWER: this solution centers each word, to add complexity.  Problem is if there is an odd number of letters in the word - 4 spaces have to be put on one side, 3 on the other, so the stars on the right side for the words with an odd number of letters are one space too short compared with those that have an even number of letters, it zigzags because of this.  1 space needs to be added to the spaces function for words where length % 2 !==0 but where to put the if statement and get it to fall in to the order of operations in the forEach loop?
 
 function framethewords() {
     //get the input
@@ -29,50 +29,23 @@ function framethewords() {
     // console.log(userInput)
     //turn input string into array of strings so the longest word's length can be determined
     const words = userInput.split(",");
-    console.log(words);
     //determine length of longest word in array of strings - map the length of each word in the array words and then apply the max method to determine the longest word: (arrow functions wait for the event handler to tell it when to run so can be used in asynchronous in response to button clicks or input field completions)
     const maxLength = Math.max(...words.map(word => word.length));
-    //generate array of the lengths of each word in the array "words"
-    const wordLengths = words.map(word => word.length);
-    console.log(wordLengths);
-    //determine number of spaces that have to be put on either side of each word in the array to center each word
-
-    // const centeringMarginSpaces = 
-        //((maxLength minus wordLength/2 iterated over wordlength array)
-    //  
-    // 
-
-    firstlastrow = console.log("🌟".repeat(maxLength+4)); //this allows space for two stars on either side of the longest word in the next rows to come (it's 4 stars longer than the longest word)
-   
-    // middlerows:// console.log(starsymbol+" "+centeringMarginSpaces+word+centeringMarginSpaces+" "+starsymbol);
-
+    // console.log the first row (this allows space for two stars on either side of the longest word in the next rows to come (so it needs to be 4 stars longer than the longest word):
+    const firstRow = console.log("*".repeat(maxLength+4));
+    //determine number of spaces that have to be put on either side of each word in the array to center each word,and then console.log those middle rows so that spaces is available to be used by the console.log:
+    words.forEach(word => {
+        const spaces = " ".repeat((maxLength - word.length)/2);
+        const middleRows = console.log("* "+spaces+word+spaces+" *")});
+        
+    //then console.log the last row of stars:
+    const lastRow = console.log("*".repeat(maxLength+4)); 
 }
 framethewords();
 
-//Alternate way of getting to the wordLengths array:
-//______________
-    //const wordLengths = []; used with
-    //for(let i=0; i < words.length; i++)
-    //      wordLengths.push(words[i].length);
-    //{   
-//______________
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//_______________________
 // solution on VIDEO :
 
 // const answer = prompt("Type a few words separated by commas, using no spaces between words");
@@ -112,7 +85,7 @@ framethewords();
 //     return "*".repeat(numberOfStarsOnFirstRow);
 // }
 
-
+//____________________
 // Another example from internet:
 // function createFrame(words) {
 //     // Find the length of the longest word
@@ -138,31 +111,3 @@ framethewords();
 //   createFrame(wordsArray);
   
 
-// Another example from the internet:
-//   function createFrame(words) {
-//     // Find the length of the longest word
-//     const maxLength = Math.max(...words.map(word => word.length));
-  
-//     // Create the top border of the frame
-//     const topBorder = '*'.repeat(maxLength + 4);
-  
-//     // Display the top border
-//     console.log(topBorder);
-  
-//     // Display the framed words
-//     words.forEach(word => {
-//       const spaces = ' '.repeat(maxLength - word.length);
-//       console.log(`* ${word}${spaces} *`);
-//     });
-  
-//     // Display the bottom border
-//     console.log(topBorder);
-//   }
-  
-//   // Prompt the user for words
-//   const userInput = prompt('Enter words separated by commas:');
-//   const wordsArray = userInput.split(',').map(word => word.trim());
-  
-//   // Display the words in a frame
-//   createFrame(wordsArray);
-  
