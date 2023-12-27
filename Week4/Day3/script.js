@@ -9,6 +9,8 @@
 //
 //Functions can have default values, but when it is called, new values can be inserted in the call instead
 
+
+//________________________________________
 //DOM Manipulation using Javascript
 
 //query selector all always returns an array even if there is only one specific object in it that you called for

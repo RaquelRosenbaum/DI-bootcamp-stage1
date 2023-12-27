@@ -1,3 +1,5 @@
+//The changes I made here weren't showing up on the live preview and I dug into it but can't find why.  Does each set of js/html/css files have to be in separate folders also, not just separate files for each of these for each exercise number?
+
 //1-1. Retrieve the div and console.log it
 const letsSeePetesGrandParentsHouseTheDivContainer = document.getElementById("container");
     console.log(letsSeePetesGrandParentsHouseTheDivContainer);  // If we had used querySelector, we'd need the hash because it's an ID, but because we're using the method specific for Id's, we don't.    
