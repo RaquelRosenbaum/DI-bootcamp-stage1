@@ -101,20 +101,20 @@
 //see photo from Tural's code scrnshot
 //see notes from Ziv's solution
 
-function myMove() {
-    const elem = documen.querySelector('.inner');
-    // console.log(elem); box to move
-    let pos = 0;
-    let id = setInterval(function() {
-        if(pos >= 350) {
-            clearInterval(id)
-        }
-        pos++;
-        elem.style.left = pos + "px;" 
-        elem.style.top = pos + "px";//if add this - will be diagonal
-        // if just use up to here without the if statement the box will move off the yellow box to the right edge of the window
+// function myMove() {
+//     const elem = documen.querySelector('.inner');
+//     // console.log(elem); box to move
+//     let pos = 0;
+//     let id = setInterval(function() {
+//         if(pos >= 350) {
+//             clearInterval(id)
+//         }
+//         pos++;
+//         elem.style.left = pos + "px;" 
+//         elem.style.top = pos + "px";//if add this - will be diagonal
+//         // if just use up to here without the if statement the box will move off the yellow box to the right edge of the window
         
-    }, 5); //this is 5milliseconds so not too slow
+//     }, 5); //this is 5milliseconds so not too slow
 }
 
 //what if you wanted to move the box differently, around all the edges, left to right to bottom right to left bottom back to upper left corner, or diagonally?

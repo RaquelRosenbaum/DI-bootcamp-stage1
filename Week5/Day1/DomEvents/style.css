@@ -1,0 +1,8 @@
+.mainclass {
+    border: 1px solid cyan;
+    padding: 20px;
+}
+.submainclass {
+    border: 1px solid red;
+    padding: 20px;
+}
