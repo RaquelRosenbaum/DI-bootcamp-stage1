@@ -59,3 +59,115 @@ for (let element of AllBooks) {
     //don't have to ask if alreadyRead is true - if false it doesn't execute
 
 }
+// Javascript: SUM UP On JS Notions
+// Table Of Contents
+// JAVASCRIPT TYPES
+// JAVASCRIPT COMPARISONS
+// JAVASCRIPT VARIABLES
+// JAVASCRIPT CONDITIONALS
+// JAVASCRIPT LOGICAL OPERATORS
+// JAVASCRIPT FUNCTIONS
+// JAVASCRIPT DATA STRUCTURES
+// JAVASCRIPT LOOPING
+// JAVASCRIPT KEYWORDS:
+// Feedback
+// Last Updated: September 22nd, 2023
+
+// SUM UP on JS notions we learned this week! (Some of them on Remote Learning)
+
+
+
+// JAVASCRIPT TYPES
+// Number
+// String
+// Boolean
+// Undefined
+// Null
+// Symbol (new in ECMAScript 6) - Remote Learning
+// Object
+
+
+// JAVASCRIPT COMPARISONS
+// !==
+// ===
+// >=
+// <=
+// >
+// <
+
+
+// JAVASCRIPT VARIABLES
+// var
+// let (new in ECMAScript 6) - Remote Learning
+// const (new in ECMAScript 6) - Remote Learning
+
+
+// JAVASCRIPT CONDITIONALS
+// if
+// else
+// else if
+// ternary operator  - Remote Learning 
+// switch
+
+
+// JAVASCRIPT LOGICAL OPERATORS
+// &&
+// ||
+// !
+
+
+// JAVASCRIPT FUNCTIONS
+// var a = function name() {}
+// function name() {}
+// return
+
+// () => (new in ECMAScript 6) - Remote Learning
+
+
+// JAVASCRIPT DATA STRUCTURES
+// Array
+// Object
+// JAVASCRIPT LOOPING
+// for
+// while
+// do 
+
+// forEach (new in ECMAScript 5) - Remote Learning
+
+
+// JAVASCRIPT KEYWORDS:
+// You have to learn some of these by yourself! Check them out in Google
+
+// break
+// case
+// catch
+// class
+// const
+// continue
+// debugger
+// default
+// delete
+// do
+// else
+// export
+// extends
+// finally
+// for
+// function
+// if
+// import
+// in
+// instanceof
+// new
+// return
+// super
+// switch
+// this
+// throw
+// try
+// typeof
+// var
+// void
+// while
+// with
+// yield

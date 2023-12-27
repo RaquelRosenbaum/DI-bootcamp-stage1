@@ -56,3 +56,4 @@
 // }
 // console.log(square(2));  the expression "square(2)"  is the argument that tells the function that doesn't have a parameter set.
 
+//DOM exists so that Javascript can change the HTML and CSS dynamically without changing the HTML and CSS files themselves
