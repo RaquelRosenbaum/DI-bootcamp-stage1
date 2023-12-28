@@ -16,11 +16,21 @@
     <div class="squares-container">
 
         <div class="draggable-container">
-            <div id="draggable-element">
+            <div id="draggable-element" draggable="true">
+                ondragstart="onDragStart4PinkSquare(event)"
+                ondragend="onDragEnd4PinkSquare(event)"
+                ondrag="onDrag4PinkSquare(event)"
+                ondragstart="onDragStart4OrangeSquare(event)"
+                ondragend="onDragEnd4OrangeSquare(event)"
+                ondrag="onDrag4OrangeSquare(event)"
             </div>
         </div>
 
         <div id="drop-element">
+            ondragover="onDrag4OverOrangeSquare(event)"
+            ondrop="onDrop4OverOrangeSquare(event)"
+            ondragover="onDrag4OverPinkSquare(event)"
+            ondrop="onDrop4OverPinkSquare(event)"
         </div>
 
     </div>
