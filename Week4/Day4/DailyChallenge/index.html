@@ -1,15 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-    		<charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-    		<title>Week4Day4DailyChallenge</title>
-    		<link rel="stylesheet" href="style.css"></link>
-	</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Week4Day4DailyChallenge: Create a solar system</title>
+        <style>
+            body {
+                background-color: black;
+                padding: 10px;
+            }
+            .planet {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                text-align: center;
+                padding: 10px;
+                position: relative;
+                border: 2px solid white;
+            }
+            .moon {
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: rgb(237, 237, 237);
+                border: 5px solid red;
+            }
+        </style>
+    </head>
+    <body>
 
-	<body>
-		<h1>Week4Day4DailyChallenge</h1>
-		<script src="script.js"></script>
-	</body>
+    <section class="listPlanets"></section>
 
+    <script src="script.js"></script>
+    </body>
 </html>

@@ -15,8 +15,8 @@ const bookinfoTableInDiv = document.createNewElement("table");//create the table
 
 allBooks.forEach(book => {  //arrow function - watch out the parens goes at the end outside the curly and before the semicolon; iterates over all objectsin the allBooks array, thus accessing each book's info in turn to place those into the table
     const rows = document.createElement("tr");  // this creates the rows themselves but has to be inside the forEach loop because it tells it how many rows to create according to the data in allBooks
-    if (book.AlreadyRead === true) { //true and false are the values, the properties, of the key AlreadyRead in the allBooks array, it pulls from this
-    rows.style.color = 'red';}
+        if (book.AlreadyRead === true) { //true and false are the values, the properties, of the key AlreadyRead in the allBooks array, it pulls from this
+        rows.style.color = 'red';}
         else(book.AlreadyRead === false) {
     rows.style.color = 'green';  //green for already read is better
     }
