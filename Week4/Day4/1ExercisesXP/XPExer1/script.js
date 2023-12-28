@@ -1,4 +1,4 @@
-//The changes I made here weren't showing up on the live preview and I dug into it but can't find why.  Does each set of js/html/css files have to be in separate folders also, not just separate files for each of these for each exercise number?
+//The changes I made here weren't showing up on the live preview and I dug into it but can't find why.  Does each set of js/html/css files have to be in separate folders also, not just separate files for each of these for each exercise number?  I put them in separate folders and corrected the refs to the other files in the htmls but no success
 
 //1-1. Retrieve the div and console.log it
 const letsSeePetesGrandParentsHouseTheDivContainer = document.getElementById("container");
