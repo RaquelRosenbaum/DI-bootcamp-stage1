@@ -16,3 +16,13 @@ const addressHistoryChocolateH3 = document.querySelector("body article h2");
 addressHistoryChocolateH3.addEventListener("click", function);
     addressHistoryChocolateH3.style.display = "none";
 
+//1-5.
+const textbolderbutton = document.getElementbyId("makeTextBigger");
+textbolderbutton.addEventListener("click",function);//add an event listener at the location of the button id makeTextBigger that I put in the html, and execute the javascript internal function for event listeners when the user clicks the button.
+
+//the operation of making the text bold
+//designating which text is going to be made bolder - get the address of the contents of the article tag
+
+const ppToBeBolded = document.getElementsByTagName("article");
+ppToBeBolded.style.fontWeight = "bold";
+
