@@ -1,0 +1,12 @@
+
+DailyChallenge Wk6Dy6
+
+There is no actors database in the class materials or videos - 
+Couldn’t get the GUI for postgresql running on my mac so just wrote the exercises here for now
+This is a text file with what I think the code should be and additions and notes from the video solution, couldn't get postgresql running on my mac, ran brew doctor, got heading probs, need to get help in class on the install.
+
+1-
+COUNT DISTINCT actor_lname in actors;
+
+2-
+Outcome will be the table will have an additional row with the fields filled in that were entered, and the other fields for that row will have nulls in them.  If those fields require NOT NULL, there will be an error message.

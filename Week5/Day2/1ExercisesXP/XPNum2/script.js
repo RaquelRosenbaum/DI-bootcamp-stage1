@@ -16,9 +16,10 @@ console.log(addressLNameByAtt);
 
 //2-4-a.
 //the default action of the button is simply to refresh the page, this is why we have to prevent the default so we can ask it to do something else instead
+event.preventDefault();
 
 //2-4-b.
-event.preventDefault();
+
 //2-4-c.
 //2-4-d.
 //2-4-e.

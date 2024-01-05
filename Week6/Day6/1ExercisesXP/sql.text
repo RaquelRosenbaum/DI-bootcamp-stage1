@@ -1,0 +1,123 @@
+Exercises XP Wk6Dy6 
+
+Couldn’t get the GUI for postgresql running on my mac so just wrote the exercises here for now:
+This is a text file with what I think the code should be and additions and notes from the video solution, couldn't get postgresql running on my mac, ran brew doctor, got heading probs, need to get help in class on the install.
+
+1-
+CREATEDB ‘public’ - working in the command line
+
+2-
+CREATE TABLE items (id SERIAL PRIMARY KEY, prod_name VARCHAR (100) UNIQUE NOT NULL, price MONEY);
+
+CREATE TABLE customers (id SERIAL PRIMARY KEY, cust_fname VARCHAR (50) NOT NULL, cust_lname VARCHAR (100) NOT NULL);
+
+1-
+INSERT INTO items (prod_name, price) VALUES (‘Small Desk’, 100);
+INSERT INTO items (prod_name, price) VALUES (‘Large Desk’, 300);
+INSERT INTO items (prod_name, price) VALUES (‘Fan’, 80);
+
+2-
+INSERT INTO customers (cust_fname,cust_lname) VALUES (‘Greg’, ‘Jones);
+INSERT INTO customers (cust_fname,cust_lname) VALUES (‘Sandra’, ‘Jones);
+INSERT INTO customers (cust_fname,cust_lname) VALUES (‘Scott’, ‘Scott);
+INSERT INTO customers (cust_fname,cust_lname) VALUES (‘Trevor’, ‘Green);
+INSERT INTO customers (cust_fname,cust_lname) VALUES (‘Melanie’, ‘Johnson);
+
+3-1-
+SELECT * FROM public;
+OR 
+SELECT items, customers FROM public;
+
+3-2-
+SELECT items FROM public 
+WHERE price >  80;
+Outcome: the small desk and large desk
+3-3-
+SELECT items FROM public 
+WHERE price <=  300;
+Outcome: all items
+3-4-
+SELECT customers FROM public 
+WHERE lname ILIKE ‘Smith’;
+Outcome will be NULL, empty set.  No items have the last name of Smith.
+If use = sign instead, be careful no spaces around the =. Per video solution
+
+3-5-
+SELECT customers FROM public 
+WHERE lname ILIKE ‘Jones’;
+Outcome: Greg Jones and Sandra Jones
+
+3-6-
+SELECT customers FROM public 
+WHERE fname NOT ‘Scott’;
+Outcome: Greg Jones and Sandra Jones and Trevor Green and Melanie Johnson
+Can also use != 
+
+Exercises XP Plus Wk6Dy6
+
+1-
+CREATEDB ‘bootcamp’
+Outcome: empty database without tables
+
+2- and 3-
+CREATE TABLE students (id SERIAL PRIMARY KEY, stud_fname VARCHAR (50) NOT NULL, stud_lname VARCHAR (100) NOT NULL, stud_DOB DATE DD/MM/YYYY NOT NULL);
+
+INSERT
+1-
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Marc’, ‘Benichou’, 02/11/1998);
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Yoan’, ‘Cohen’, 03/12/2010);
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Leah’, ‘Benichou’, 27/07/1987);
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Amelia’, ‘Dux’, 07/04/1996);
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘David’, ‘Grez’, 14/06/2003);
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Omer’, ‘Simpson’, 03/10/1980);
+From video - use bulk insert
+2-
+INSERT INTO students (stud_fname, stud_lname, stud_DOB) VALUES (‘Raquel Dinah’, ‘Rosenbaum’, 27/04/1965);
+Outcome: the ID should be 7
+
+SELECT
+
+1-
+SELECT * FROM students;
+OR
+SELECT stud_fname, stud_lname, stud_DOB FROM students;
+
+2-
+SELECT stud_fname, stud_lname FROM students;
+
+3-1-
+SELECT * FROM students 
+WHERE id=2;
+
+3-2-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_lname ILIKE ‘Benichou’ AND stud_fname ILIKE ‘Marc’;
+From video - I in the ILIKE is insensitive LIKE
+3-3-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_lname ILIKE ‘Benichou’ OR stud_fname ILIKE ‘Marc’;
+
+3-4-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_fname ILIKE %a%;
+
+3-5-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_fname ILIKE ‘a%’;
+
+3-6-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_fname ILIKE ‘%a’;
+
+3-7-
+SELECT stud_fname, stud_lname FROM students 
+WHERE stud_fname OFFSET(‘a’,-2);
+Per video:  WHERE (RIGHT(stud_fname, 2) LIKE ‘a%’);
+
+3-8-
+SELECT stud_fname, stud_lname FROM students 
+WHERE id=1 AND id=3;
+Outcome: null, empty set
+4-
+SELECT * FROM students 
+WHERE stud_DOB>=01/01/2000;
