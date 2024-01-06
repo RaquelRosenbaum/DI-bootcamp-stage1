@@ -1,0 +1,151 @@
+lecture 4 jan 2024 SQL
+
+don’t use select * - it’s bad for performance, is a processor heavy operation, not efficient enough, list out all the fields instead
+
+use SQL where possible rather than a more compiled language where possible, more efficient
+
+|| is or in JS but concatenation in SQL  OFFSET skips x number of rows at the beginning
+
+LIMIT 4 OFFSET 3 start from row 4, give only the next 4 rows according to the other parameters
+
+LIKE %13 ends with 13
+LIKE %P% has a P inside
+
+\d shows the current table
+
+_____________________
+
+Notes
+
+* NOT NULL Constraint − Ensures that a column cannot have a NULL value.
+* DEFAULT Constraint − Provides a default value for a column when none is specified.
+* UNIQUE Constraint − Prevents two records from having identical values in a particular column
+* PRIMARY KEY− Uniquely identifies each row/record in a database table. It enforces the column values to be non-null and unique.
+* To comment lines in the Script, you can click on  command+/
+* AND
+* OR
+* NOT
+* ILIKE - case insensitive
+* LIKE
+* LIMIT
+* INSERT INTO … VALUES
+* OFFSET
+* ORDER BY ASC or DESC
+* UPDATE
+* SET
+* RETURNING - 
+* ALTER TABLE
+* ADD COLUMN
+* DROP COLUMN
+* RENAME COLUMN
+* VALUES
+* WHERE IN
+* WHERE NOT IN
+* BETWEEN x AND y
+* GROUP BY (must be used with aggregate fn, remember)
+* INNER JOIN
+* LEFT OUTER JOIN
+* RIGHT OUTER JOIN
+* FULL OUTER JOIN
+* GROUP BY…HAVING
+* UNION
+* 
+ALTER TABLE table_name
+ALTER COLUMN column_name1 [SET DATA] TYPE new_data_type;
+
+ALTER TABLE table_name action;
+
+DROP TABLE IF EXISTS table_name;
+
+ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name;
+
+postgresql in the command line:
+1. Switch to postgres User : sudo -i -u postgres
+2. Create Database: CREATE DATABASE hollywood;
+3. Show Existing Databases: \l
+4. Show Tables: \d
+5. Show Tables in current database : \dt
+6. Switch to another database: \c <database_name>
+
+psql postgres
+
+1. Check the version of PostgreSQL : SELECT version();
+2. See the previously executed command: \g
+3. Enlisting all the available commands : \?
+4. Knowing the syntaxes of PostgreSQL statements: \h <statement> \h SELECT
+5. # To get the syntax of a SELECT statement
+6. # Response 
+7. Command:     SELECT
+8. Description: retrieve rows from a table or view
+9. Syntax: .. 
+10. Edit command in your own editor: \e opens you editor. You can then modify the command, save the file, and close it. psql will execute the commands written in the file.
+13 . Quit psql : \q
+
+
+CREATE TABLE table_name (
+ column_name datatype, column_name datatype, 
+column_name datatype, 
+column_name datatype, 
+column_name datatype, 
+);
+
+CREATE TABLE actors(
+ actor_id SERIAL PRIMARY KEY,
+ first_name VARCHAR (50) NOT NULL,
+ last_name VARCHAR (100) NOT NULL,
+ age DATE NOT NULL,
+ number_oscars SMALLINT NOT NULL
+)
+
+INSERT INTO table_name (colname1, colname2, colname3) VALUES (value1, value2, value3);
+
+An aggregate function is a special kind of function that operates on several rows of a query at once, returning a single result.  only exists for the duration of the query.
+
+
+Function	Description
+avg(expression)	Returns the average of the expression values from all rows in a group.
+count(expression)	Returns the number of values, per each aggregated group of rows, for which expression is not NULL
+max(expression)	Returns the maximum value of expression in the grouped rows
+min(expression)	Returns the minimum value of expression in the grouped rows
+stddev(expression)	Returns the standard deviation of the values of expression in the grouped rows
+sum(expression)	Returns the sum of the values of expression in the grouped rows
+variance(expression)	Returns the variance of the values of expression in the grouped rows
+
+PostgreSQL DISTINCT ON example
+The following statement sorts the result set by the  bcolor and  fcolor, and then for each group of duplicates, it keeps the first row in the returned result set.
+SELECT
+	DISTINCT ON (bcolor) bcolor,
+	fcolor
+FROM
+	distinct_demo 
+ORDER BY
+	bcolor,
+	fcolor;
+Code language: SQL (Structured Query Language) (sql)
+
+Here is the output:
+￼
+
+ex of insert using fetched data (the id of the actor from another table)- 
+
+INSERT INTO movies (movie_title, movie_story, actor_playing_id) VALUES
+    ( 'Good Will Hunting', 
+    'Written by Affleck and Damon, the film follows 20-year-old South Boston janitor Will Hunting',
+    (SELECT actor_id from actors WHERE first_name='Matt' AND last_name='Damon')),
+    ( 'Oceans Eleven', 
+    'American heist film directed by Steven Soderbergh and written by Ted Griffin.', 
+    (SELECT actor_id from actors WHERE first_name='Matt' AND last_name='Damon'));
+
+INNER JOINS TO SET UP FOREIGN KEY:
+selects records that have matching values in both tables.
+PostgreSQL INNER JOINS returns all rows from multiple tables where the join condition is met. INNER JOIN returns a result set containing a row in the left table that matches the row in the right table.
+
+SELECT actors.first_name, actors.last_name, movies.movie_title
+FROM actors
+INNER JOIN movies
+ON actors.actor_id = movies.actor_playing_id;
+
+￼
+The RIGHT JOIN is a reversed version of the left join. It produces a result set that contains all rows from the right table with matching rows from the left table. If there is no match, the left side will have null values.
+
+The table listed after the JOIN keyword is the right table because it is listed on the right side of the JOIN keyword.

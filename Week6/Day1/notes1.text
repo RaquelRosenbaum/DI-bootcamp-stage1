@@ -1,0 +1,13 @@
+Doing branches and pulls for a project done alone:
+1. create a branch
+2. checkout to this branch
+3. git pull
+4. add new code
+git add, commit, 
+git push
+git checkout main
+git branch   —— to check that in main
+git merge <branchname>
+GitHub - pull request, etc until merge approve
+6. delete the  branch or leave it 
+7. cretae new branch for next
