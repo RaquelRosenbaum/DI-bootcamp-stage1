@@ -1,0 +1,772 @@
+body {margin: auto 0;} to remove white space around body container on website so no white space around edge of website.
+
+list-style: none; to remove bullet point in a unordered list
+
+text-decoration: none; to remove line under the link, the a tag
+
+if margin-left is auto, it pushes the rightmost object in an inline series (navbar) to the right margin, leaving the others left justified
+this way, the navlink that is on the right will always be pushed to the right on all devices - responsiveness
+
+align-items: center;
+justify-content: center; 
+is the combo used for a cover, in a flex, because it’s simplest - covers are centered vert and horiz
+and also use vh for height so it is responsive
+the width is already responsive because it’s in a flex container
+
+now put a grid inside the flex - make a div with a class that involves the words “grid-wrapper” in it
+
+example:
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr))
+
+but the images are taking up too much space and aren’t the same so:
+
+.box > img {
+	width: 100%;
+{
+
+
+.box {
+	background-color: #444;
+	padding: 130px;
+	margin: 20px;
+this gives the grey background to the blue computer science images in the example, and makes them small (the padding and width 100% interact)
+ 
+.cover {
+	width: 30 rem
+	}
+
+/* NAV */
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%; THIS ONE NEEDED SO NAVBAR CONTINUES TO TAKE UP WHOLE WIDTH AFTER BEING FIXED AND TOP =0 
+
+The above combo is very typical for a sticky nav
+	}
+
+.main-nav {
+	display: flex;
+	list-style: none;
+	font-size: 0.7em;
+	margin: 0;
+	}
+@media only screen and (max-width: 600px) { .main-nav {
+	font-size: 0.5em;
+	padding: 0;
+	}
+}
+
+.push {
+	margin-left: auto;
+	}
+
+li {
+	padding: 20px;
+	}
+
+a {
+	color: #;
+	text-decoration: none;
+	}
+.zone:hover {
+	-webkit-box-shadow:rbga(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.8)	etc. etc. etc.
+
+.box:hover {
+	-webkit-transform: rotate (07deg);
+	etc.
+	etc. plugin from a CDN website
+
+.footer {
+	text-align: center;
+	}
+
+HTML for the above was:
+<html>
+<head>
+	<title>Layout Master</title>
+	<link stylesheet etc…..
+</head>
+<body>
+	<nav class=“zone blue sticky THIS MAKES IT FIXED - SEE CSS”>
+		<ul class=“main-nav”>
+			<li><a href=“”>About</a></li>
+			<li><a href=“”>Products</a></li>
+			<li><a href=“”>Our Team</a></li>
+			<li> class=“push”><a href=“”>Contacts</a></li>
+		</ul>
+	</nav>
+	<div class=“container zone”>Cover!!!><img class=“cover” src=“”</div>  BY NOT PUTTING THE COLOR RED HERE IN THE CLASS  after zone IT IS JUST A WHITE BACKGROUND FOR THE IMG THAT SITS ON TOP OF THE COVER AREA
+	<div class=“zone blue grid-wrapper”>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+		<div class=“box zone”><img src=“”></div>
+	</div>
+<footer class=“zone yellow”>Zero => Mastery</footer>
+
+
+
+
+TO CENTER A FLEXBOX WELL:
+
+CSS
+use margin: auto;
+flex-flow: row wrap;
+justify-content: space-around;
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+
+HTML
+<ul class="flex-container">
+  <li class="flex-item">1</li>
+  <li class="flex-item">2</li>
+  <li class="flex-item">3</li>
+  <li class="flex-item">4</li>
+  <li class="flex-item">5</li>
+  <li class="flex-item">6</li>
+</ul>
+
+https://codepen.io/team/css-tricks/pen/EKEYob
+
+
+
+BOOTSTRAP TIP:
+
+better to create ids to add to css so  the bootstrap classes remain bootstrap classes so can be easily differentiated, won’t confuse them
+
+use !Important to override the Bootstrap css - theirs is primary so this is needed if you want a different color on their button etc.
+
+
+BootstrapJS script tags to add first before add the bootstrap.js snippets:
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+Tip In HTML
+1. Create a well structured HTML file, with comments that explain the layout.
+2. Removed unnecessary div elements. Include semantic elements like <header>, <footer>, <article>, <aside> into the structure.
+3. Add different types of text to the web page to practice headings, lists, and links.
+4. Change emphasis on text using bold and italics.
+5. Embed an image and add image captions.
+
+
+Tip In CSS
+1. Add borders to your elements to really picture the structure of the layout. As soon as everything is well structured, you will be able to remove the borders.
+2. Use classes and ids.
+3. Use Google Fonts.
+4. Use Materialize
+
+
+
+GUI (graphical) vs. CLI (command line - MSDOS)
+
+creating index.html file in terminal
+
+Github-
+versioning, collaboration, backup for projects and files, like a cloud, Github is a cloud-based repository service for Git language files
+
+Git version control is installed locally on your computer, and it communicates with Github online for the repository.
+
+don’t forget to do terminal git push
+
+git commit, git push, git commit
+
+this is like saving a file - do it before 
+
+always change git files on your computer locally not on the website
+
+
+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
+
+Assignments are sent to instructor via Slack group
+
+____________________
+Speed of website =
+
+* location of server
+* how many trips (hops)
+* size of files
+* 
+
+* Unlocking the Power of Google Search: how to use a search to the max
+* Clarifying the request: Quotation Marks “”
+* Broadening Search Horizons: OR with Parentheses ()
+* Excluding Irrelevant Results: Minus «-»
+* Getting Targeted Results: «Intitle:»
+* Using Site-Specific Search: «Site:»
+* Additionally
+    * Controlling Results Number: Num = xx
+
+
+T Model of skills = across the top is the surface skills, the post is the in-depth skillsets
+
+
+good books -
+
+Clean Code
+Secrets of the JS Ninja
+
+youtube channels -
+Kevin Powell, James Q Quick
+
+_____________________
+html forms
+
+query strings - form contents sent via appending the link with the values in the form
+	method = “GET”
+		? = data coming
+		&lastname=man
+		&etc
+		&etc
+
+method = “POST”
+	attaches it to body so that the info isn’t visible in the link
+
+_______________
+
+
+break a website - can play around by copying the html of the source of a website (right click dev tools) then save, then open the file in a browser and commence trying to see what happens when you change the html 
+
+
+index.html is automatically treated as the home page of a website
+
+
+Git and GitHub:
+
+Repository: The file location where your project is stored.
+Stage: Before you can commit changes in Git, you need to stage them – this gives you the chance to prepare your code before formally adding it to your project.
+Commit: The command used to save new changes to your project in the repository.
+Branch: The part of your project you’re actively developing.
+
+
+Visual Studio Code
+Description	Shortcut
+Open a folder	File > Open Folder (Ctrl+K Ctrl+O)
+File Explorer	View > Explorer (Ctrl+Shift+E)
+Create a new file	File > New File (Ctrl+N)
+Save a file	File > Save (Ctrl+S)
+Auto Save	File > Auto Save
+Search view	View > Search (Ctrl+Shift+F)
+Source Control	View > Source Control (SCM) (Ctrl+Shift+G)
+Run and Debug	View > Run (Ctrl+Shift+D)
+Extensions view	View > Extensions (Ctrl+Shift+X)
+Open the Command Palette	View > Command Palette… (Ctrl+Shift+P)
+Output panel	View > Output (Ctrl+Shift+U)
+Debug Console	View > Debug Console (Ctrl+Shift+Y)
+Problems panel	View > Problems (Ctrl+Shift+M)
+Integrated Terminal	View > Terminal (Ctrl+`)
+Zoom out	Ctrl+-
+Zoom in	Ctrl+=
+Customize your editor with color themes.	File > Preferences > Color Theme (Ctrl+K Ctrl+T)
+Code > Preferences > Color Theme
+
+
+For MASSIVE Resource list see apple notes (links embedded in each business name)
+
+How To Apply Style To Parent If It Has A Child With CSS -- graphical, see Apple notes
+
+
+What Does The “+” Plus Sign CSS Selector Mean?  -- graphical, see Apple notes
+
+
+100vh- 100% of the viewport height
+100vw - 100% of the viewport width
+
+See Youtube for DI list - relative, static etc. positioning 
+
+
+
+Grid Example code snippet
+
+
+HTML:
+
+<html>
+  <body>
+    <section>
+    <div class="div1">
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+    </div> 
+      <div class="div2">
+      What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+    </div>
+         <div class="div1">
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </div> 
+<div class="div2">
+      What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+    </div>
+      <div class="div3">
+      What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+    </div>
+    </section>
+  </body>
+</html>
+
+CSS:
+
+* {
+  box-sizing:border-box;
+}
+
+section {
+  padding: 10px;
+  border: 3px solid black;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1fr, 3fr);
+  grid gap:10px;
+  grid-row-gap:20px;
+/*  OR : grid-gap: 10px;  */
+  
+}
+
+section > div {
+  padding: 5px;
+}
+
+.div1 {
+  border: 1px solid blue;
+  background-color: #e6ffff;
+  /*  Example with grid area  */
+  /*     grid-area : a */
+}
+
+.div2 {
+  border: 1px solid red;
+  background-color: #ffd6cc;
+  /*  Example with grid area  */
+  /*     grid-area : b */
+  align-self : start
+}
+
+.div3 {
+  border: 1px solid orange;
+  background-color: #ffffcc;
+  /*  Example with grid area  */
+  /*     grid-area : c */
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3
+}
+
+
+Class notes - 
+flexbox - for container need to set the height, it’s the width that is responsive
+Graphical, see apple notes
+
+
+
+explicitly created columns without putting a line for grid-template-rows.  Allowing it to create implicit rows automatically, unless you have a very specific structure.
+
+so there are 3 columns explicit and 5 items so it creates another row to put them in and wraps two of them onto it
+
+
+
+Grids - See apple notes, graphical
+
+https://grid.malven.co/
+
+3. Minmax
+
+Gridlines and indexing -- see apple notes graphical
+
+
+To add a color picker in an HTML page
+
+<html>
+ <head>
+ </head>
+ <body>
+   <label for="colorpicker">Color Picker:</label>
+   <input type="color" id="colorpicker" value="#0000ff">
+ </body>
+</html>
+
+
+Overlay text on image example
+
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Overlay with Text</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="image">
+            <div class="overlay-text">Your text here</div>
+        </div>
+    </body>
+</html>
+
+
+CSS:
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #000000; 
+  color: #fff; 
+  padding: 10px 20px; 
+  font-size: 20px; 
+  text-align: center;
+
+
+media queries
+float isn’t required when the width is being changed for each one as a percent of the width
+width: 100% etc.
+no float needed - not relevant
+
+
+put images in their own folder
+
+600-767 is a medium range 
+
+767 is a max width, 600 min
+
+don’t try to set media queries in the inspect mode in the live viewer - they won’t switch properly from number of cards across per mobile desktop etc.
+
+div.container
+div.element 
+
+these automatically fill in the code for these when you type this into VSCode
+
+FLEXBOX
+
+display: flex;
+NOT 
+display: flexbox;
+
+main axis left to right
+cross axis top to bottom
+
+these change according to row reverse etc.
+
+justify content works in main axis, align items in cross axis
+
+so with flexbox, media queries don’t need to involve the gen layout, just details you want different for mobile vs desktop etc.
+
+there is also justify-items and align-content
+
+to make an item within the parent, put display: flex; and now it’s a parent of more items inside it
+
+
+align-items: baseline
+align-items: stretch
+
+remember that it’s like the methods in Python - different people wrote different parts of the program
+
+
+HTML Boilerplate
+
+<!doctype html>
+<html>
+	<head>
+    		<charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title> AvengersExercise </title>
+    		<link rel="stylesheet" href="style.css"></link>
+	</head>
+
+	<body>
+  
+		<script src = "js/scripts.js"></script>
+
+	</body>
+
+</html>
+
+
+Putting styling in the html inline:
+
+<h1 style="color:blue; font-size:12px;">Hello World</h1>
+
+
+aside always comes after the main in the body
+
+section is inside an article but sometimes you just use sections without articles
+
+semantic elements are primarily to increase SEO
+
+the css stylesheet is a higher specificity (but not as specific as inline style tag) - will prevail generally
+
+cascading means the last instruction prevails - overrides the former if they are referring to the same thing - same thing done twice in the styesheet
+
+inline-block display is highly useful for creating more than one block to take up the width of the webpage, with each having the ability to set its width and height
+
+<div> class= rect red
+		rect white
+
+so in the css:
+.rect {
+	properties - covers both red and white
+	}
+
+
+
+Example form - see apple notes graphical
+
+
+
+
+    .shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+1. The horizontal offset of the shadow, positive means the shadow will be on the right of the box, a negative offset will put the shadow on the left of the box.
+2. The vertical offset of the shadow, a negative one means the box-shadow will be above the box, a positive one means the shadow will be below the box.
+3. The blur radius (optional), if set to 0 the shadow will be sharp, the higher the number, the more blurred it will be.
+4. The spread radius (optional), positive values increase the size of the shadow, negative values decrease the size. Default is 0 (the shadow is same size as blur).
+5. Color
+
+
+Example:  HTML and CSS for centering red box child inside dotted outline parent container:
+
+WITHOUT FLEXBOX:
+
+HTML:
+<body>
+	<div class=“container”>
+		<h1>Hello World</h1>
+		<h2>I’d like to be centered too</h2>
+		<p>Same!</p>
+		<div class=“child”></div>
+	</div>
+	
+<body>
+
+CSS:
+.container   {
+	margin: 25px;
+	width: 350px;
+	height: 200px;
+	outline: dashed 4px black;
+	position: relative;   <<<allows interaction parent/child
+	}
+
+.child 	{
+	position: absolute;   <<<allows interaction parent/child
+	left: 50%;   <<<both horiz and vert
+	top: 50%   <<<both horiz and vert
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	transform: translate(-50%, -50%);  <<<both horiz and vert
+	}
+
+the children of the position: relative; container are positioned relative to the container, but only inside it therefore there position is absolute - absolutely only within that parent
+
+With FLEXBOX:
+
+HTML:
+<body>
+	<div class=“container”>
+		<h1>Hello World</h1>
+		<h2>I’d like to be centered too</h2>
+		<p>Same!</p>
+		<div class=“child”></div>
+	</div>
+	
+<body>
+
+CSS:
+.container   {
+	margin: 25px;
+	width: 350px;
+	height: 200px;
+	outline: dashed 4px black;
+	display: flex;
+	justify-content: center;  <<<horizontal
+	align-items: center;  <<<vertical
+	}
+
+.child 	{
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	
+	}
+
+
+
+
+Default indentation
+All browsers provide the <ul> parent both margin and padding. While user agents CSS differ somewhat, they all include:
+
+CSS
+
+ul,
+ol {
+  /* user-agent styles */
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+ol {
+  list-style-type: decimal;
+}
+li {
+  display: list-item;
+  text-align: match-parent;
+}
+::marker {
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  text-transform: none;
+}
+
+
+
+
+
+Cheatsheet and Example for Media Queries-
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) { }
+
+@media all and (max-width: 480px) { }
+
+
+Example of Media Query-
+
+HTML file- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- MANDATORY META TAG -->
+    <!-- This gives the browser instructions on how to control the page's dimensions and scaling.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Media Queries</h1>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+</body>
+</html>
+
+
+CSS File -
+
+div {
+    height: 100px;
+}
+
+#div1 {
+    background-color: red;
+}
+
+#div2 {
+    background-color: blue;
+}
+
+#div3 {
+    background-color: green;
+}
+
+#div4 {
+    background-color: purple;
+}
+
+//The logical keywords "not" or "only" can be used optionally to include or exclude specific media types or screen sizes
+@media only screen and (min-width: 600px) {
+    div {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 900px) {
+    div {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    div {
+        width: 25%;
+        float: left;
+    }
+}
+
+__________________________________-
+
+#welcome - this refers to an id element established in the html - css stylesheet reference is hash then id name
+
+.welcome - this refers to a class that was established in the html - css stylesheet reference is dot then class name
+
+*symbol - universal - all - like in Python
+
+selector, selector2, selector3 — comma is like an and - this and this and this
+
+div p - all p tags that are descendants of a div
+
+div~p - all p tags that are siblings of a div
+
+div+p - all p tags that are placed immediately after a div tag
+
