@@ -19,7 +19,7 @@
 		<li>Jello</li>
 		<li>Spinach</li>
 		<li>Rice</li>
-		<li>Birthday Cake</li>
+		<li>Birthday Cakes</li>
 		<li>Candles</li>
 	</ul>
 	<script type="text/javascript" src="script.js"></script>
