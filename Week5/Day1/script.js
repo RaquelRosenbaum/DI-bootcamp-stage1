@@ -37,8 +37,6 @@
 
 //appendchild or whatever has to be a separate line below the line that describes the element you are adding
 
-//see scrnshotDavid
-
 //add row upon pushing button
 
 // there is tbody in every table even if you don't put it, part of the html structure - table.lastElementChild  first is the table itself
