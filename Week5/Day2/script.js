@@ -16,7 +16,7 @@
 	<button class="enter">Enter</button>
 	<ul>
 		<li class="bold red" random="23">Notebook</li>
-		<li>Jellow</li>
+		<li>Jello</li>
 		<li>Spinach</li>
 		<li>Rice</li>
 		<li>Birthday Cake</li>
