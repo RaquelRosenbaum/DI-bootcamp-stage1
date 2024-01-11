@@ -3,9 +3,9 @@
 // const form = document.getElementsByTagName("form");
 // console.log(form);
 //2-2.
-const addressFName = document.getElementById("fname");
+// const addressFName = document.getElementById("fname");
 // console.log("addressFName");
-const addressLName = document.getElementById("lname");
+// const addressLName = document.getElementById("lname");
 // console.log("addressLName");
 
 //2-3.
@@ -18,13 +18,17 @@ const addressLName = document.getElementById("lname");
 //the default action of the button is simply to refresh the page, this is why we have to prevent the default so we can ask it to do something else instead
 button.addEventListener("click",addInputToUsersAnswerUI) {
     event.preventDefault();
+    if input.value.length > 0 {
+        document.createTextNode()
+        document.createElement("li");
+        ("li").append(TextNode)
+        usersAnswer.append("li");
+    }
 }
-
 button.addEventListener("submit",addInputToUsersAnswerUI) {
     event.preventDefault();
 }
 //2-4-b.
-
 //2-4-c.
 //2-4-d.
 //2-4-e.
@@ -38,7 +42,7 @@ button.addEventListener("submit",addInputToUsersAnswerUI) {
 
 
 
-// Learning DOM Events Video Wk5Dy2
+// Notes on Video:  Learning DOM Events Video Wk5Dy2
 // example which allows the user to add items to a to-do list on the same page
 
 //The HTML for the js code below from this example:
