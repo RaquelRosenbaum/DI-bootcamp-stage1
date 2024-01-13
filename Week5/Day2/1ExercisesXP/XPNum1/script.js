@@ -26,3 +26,5 @@ textbolderbutton.addEventListener("click",function);//add an event listener at t
 const ppToBeBolded = document.getElementsByTagName("article");
 ppToBeBolded.style.fontWeight = "bold";
 
+
+

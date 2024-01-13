@@ -2,7 +2,7 @@
 //2-1.
 // const form = document.getElementsByTagName("form");
 // console.log(form);
-//2-2.
+// 2-2.
 // const addressFName = document.getElementById("fname");
 // console.log("addressFName");
 // const addressLName = document.getElementById("lname");
@@ -16,29 +16,28 @@
 
 //2-4-a.
 //the default action of the button is simply to refresh the page, this is why we have to prevent the default so we can ask it to do something else instead
-button.addEventListener("click",addInputToUsersAnswerUI) {
+
+//2-4-b. Get the  values of the input tags
+//2-4-c. Make sure that the above are not empty,
+//2-4-d. Create an li per input value,
+//2-4-e. Append them to a the <ul class="usersAnswer"></ul>, below the form.
+const addressFName = document.getElementById("fname");
+console.log("addressFName");
+const addressLName = document.getElementById("lname");
+console.log("addressLName");
+inputFromForm = ('${addressFName}, ${addressLName}');
+const usersAnswer = document.getElementsByTagName("usersanswer");
+const button = document.getElementById("enter");
+ 
+button.addEventListener("click",function() {
     event.preventDefault();
-    if input.value.length > 0 {
-        document.createTextNode()
-        document.createElement("li");
-        ("li").append(TextNode)
-        usersAnswer.append("li");
+    if inputFromForm.value.length > 0 {
+        let newliElem = document.createElement("li");
+        let newTextNode = document.createTextNode(inputFromForm.value);
+        ("li").appendCild(newTextNode);
+        usersAnswer.appendChild("li");
     }
 }
-button.addEventListener("submit",addInputToUsersAnswerUI) {
-    event.preventDefault();
-}
-//2-4-b.
-//2-4-c.
-//2-4-d.
-//2-4-e.
-
-
-
-
-
-
-
 
 
 

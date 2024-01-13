@@ -132,7 +132,7 @@ The official submission is what is not commented out below, the rest is notes to
 //     return regex.test(str)}
 // function isBetw0and10(number) {
 //     return number >= 0 && number <=10}
-// //need to call the function at the end:
+//need to call the function at the end:
 // playTheGame();    
 
 // The goal is to walk in to a coding interview 7 months from now and without searching anything, without copy/paste of templates from the your own stock of templates or the internet, have the in-depth understanding to identify the patterns and typical use cases and then cold code – therefore hopefully passing the interview.  To do what the guy in the video did, in other words.

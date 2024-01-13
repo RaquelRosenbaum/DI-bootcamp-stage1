@@ -1,13 +1,13 @@
 /**
- * DOM - Events
+ * another Example of DOM Events
  */
 
-function handleMySubmit(e) {
-  e.preventDefault();
-  const email = document.getElementById("nameinput");
-  alert(email.value);
-  e.target.submit();
-}
+// function handleMySubmit(e) {
+//   e.preventDefault();
+//   const email = document.getElementById("nameinput");
+//   alert(email.value);
+//   e.target.submit();
+// }
 
 // const div = document.getElementById("root");
 // const innerdiv = document.getElementById("root");
@@ -38,13 +38,13 @@ but1.innerText = "Click Me 1!!";
 
 but.addEventListener("click", function (event) {
   event.target.style.backgroundColor = "yellow";
-  //   changBG("yellow");
+    changBG("yellow");
   changBGPink();
 });
-// but1.addEventListener("click", function (event) {
-//   event.target.style.backgroundColor = "red";
-//   changBG("red");
-// });
+but1.addEventListener("click", function (event) {
+  event.target.style.backgroundColor = "red";
+  changBG("red");
+});
 but1.addEventListener("click", changBGPink);
 
 function changBGPink() {
@@ -60,11 +60,11 @@ function changBG(color) {
 */
 // function insertRow() {
 //   const table = document.getElementById("sampleTable");
-//   //   console.log(table);
+  //   console.log(table);
 //   const tbody = table.firstElementChild;
-//   //   console.log(tbody);
+  //   console.log(tbody);
 //   const row = tbody.lastElementChild;
-//   //   console.log(row);
+  //   console.log(row);
 //   const new_row = row.cloneNode(true);
 //   new_row.firstElementChild.textContent = "123456";
 //   new_row.lastElementChild.textContent = "abcd";
@@ -97,7 +97,7 @@ function changBG(color) {
 // }
 
 // function handleLeave(e) {
-//   // let div = document.getElementById("root")
+  // let div = document.getElementById("root")
 //   e.target.style.backgroundColor = "";
 //   e.target.style.border = "1px solid red";
 // }
