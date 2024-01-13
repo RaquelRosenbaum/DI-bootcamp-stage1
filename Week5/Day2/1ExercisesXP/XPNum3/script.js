@@ -1,5 +1,5 @@
 
-COULDN"T GET THIS ONE TO WORK-
+// FINAL ANSWER AT END journey there above
 //3-1
 // Declare a global variable named allBoldItems.
 
@@ -55,15 +55,17 @@ COULDN"T GET THIS ONE TO WORK-
 //these two functions are working all the time because of the () no parameters therefore they need to be the outer part of the function
 
 // REWORKING THE PROBLEM:
-function AddressAllBoldItems() {
-    const allBoldItems = document.querySelectorAll("strong");
-}
-AddressAllBoldItems.forEach(function(element) {
-    element.addEventListener("mouseover",function() { //no parameter, listening all the time
-        element.style.color="blue" //nested inside 
+function GetAllBoldItems() {
+    const addressAllBoldItems = document.querySelectorAll("strong");
+
+    addressAllBoldItems.forEach(function(element) { //execute the js forEach function for each item in the const cited
+        element.addEventListener("mouseover",function() { //for each element, add an EventListener.  No parameter, just "function()", so is listening all the time - ()
+            element.style.color="blue" //what to do, what we see, nested inside 
     })});
 
-AddressAllBoldItems.forEach(function(element) {
-    element.addEventListener("mouseout", function() { //no parameter, listening all the time
-        element.style.fontWeight="normal" //nested inside
-    })});
+    addressAllBoldItems.forEach(function(element) {  //execute the js forEach function for each item in the const cited
+        element.addEventListener("mouseout", function() { //for each element, add an EventListener.  No parameter, just "function()", so is listening all the time - ()
+            element.style.color="black" //what to do, what we see, nested inside.  
+    })});}
+GetAllBoldItems();
+//maybe the tag was made to be strong because they wanted those words to always be bold, but the other things desired to do, i.e. color change, we wanted to do dynamically in real time, so left those for the js script.

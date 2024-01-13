@@ -1,4 +1,6 @@
 
+COULDN"T GET THIS ONE TO WORK
+
 //2-1.
 // const form = document.getElementsByTagName("form");
 // console.log(form);
@@ -25,12 +27,12 @@ const addressFName = document.getElementById("fname");
 console.log("addressFName");
 const addressLName = document.getElementById("lname");
 console.log("addressLName");
-inputFromForm = ('${addressFName}, ${addressLName}');
+inputFromForm = ("addressFName"+" addressLName");
 const usersAnswer = document.getElementsByTagName("usersanswer");
 const button = document.getElementById("enter");
  
 button.addEventListener("click",function() {
-    event.preventDefault();
+    event.preventDefault()
     if inputFromForm.value.length > 0 {
         let newliElem = document.createElement("li");
         let newTextNode = document.createTextNode(inputFromForm.value);
@@ -69,7 +71,7 @@ button.addEventListener("click",function() {
 // </body>	
 // </html>
 
-{
+
     /* // INITIAL CODING PRE-REFACTORING:
     const input = document.getElementById(“userinput”); 
     const button = document.getElementById(“enter”); 
@@ -138,4 +140,4 @@ button.addEventListener("click",function() {
     
     button.addEventListener(“click”, addToListAfterClick);   //an event listener is a call-back function: there is no () after addToListAfterClick because that would call the function immediately, we want it called only when a click happens and this absence tells js to not call it immediately
         
-    input.addEventListener(“keypress”, addToListAfterKeypress);   //same thing as above, want addToListAfterKeypress only after keypress event occurs */}
+    input.addEventListener(“keypress”, addToListAfterKeypress);   //same thing as above, want addToListAfterKeypress only after keypress event occurs */
