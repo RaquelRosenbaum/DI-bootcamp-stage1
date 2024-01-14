@@ -83,3 +83,87 @@ console.log(result); //13 is the result
 const x1 = (sum,sum2) =>(c) => sum(sum2(6));
 //6 is multiplied by 2 and then one is added to it
 
+//objects:
+let obj = {};
+let obj1 = new Object();
+console.log(obj);
+console.log(obj1);
+obj.name = 'John';
+obj1.car = 'Alfa';
+console.log(obj);
+console.log(obj1);
+
+//destructuring an object is dissecting it, calling functions to get the contents
+
+const {name,  age, email} = obj; //these are keywords
+console.log(name, age, email);
+
+//computed properties///dynamic key values
+
+let obj = {
+    age: 32,
+    name: "Dan",
+}
+
+let objKey = "userage";
+let ojbName = "username";
+let obj = {
+    [objKey]: 32,
+    [objName]: "Dan",
+};
+console.log(obj);
+
+// Property Value Shorthand:
+
+const name = 'John';
+const age = 32;
+
+let obj = {
+    [name]: name
+    [age]: age
+}
+console.log(obj);
+
+//the above is the same as:
+//if key and value are the same name, don't need the bits after the colon
+const name = 'John';
+const age = 32;
+
+let obj = {
+    name,
+    age
+}
+console.log(obj);
+
+//loop through the object;
+
+//for each is an array method, for in is not, remember
+
+for(x in obj){
+    console.log(x, obj[x]);
+}
+//making declaration in simple variables variables occupy different slots in memory, but if variables are by reference, they occupy the same slot - the second that is declared to the be the first variable just has a pointer to the location of the first variable-  though it is located in a different slot, it's just the pointer that is located there, not its actual value - value vs. reference being located in the memory slot.  The second variable that is defined to be the first variable doesn't actually contain the value, only a reference to the value in the first variable
+
+//a cloned variable is a reference from a third location, pointing back to the address where the value of the variable resides
+
+//cloning doesn't affect nested arrays because this is like yet another address to the same location in memory
+
+//to clone a nested array or object, use JSON
+
+//JSON = text, string with special structure
+{"a":"value","b":12}  //double quotes in the key and in the value are hallmarks of the JSON
+[{"a":"value","b":12}]
+
+//Javascript Object Notation
+
+//one example - using APIs we use JSON
+//  to fetch because we can't fetch an object - on http we can't fetch anything but a string
+//so send as JSON to be converted to an array of objects
+//characterized by double quotes - let jsonArr = JSON.stringify(arr);  which produces a string whose keys and values are in double quotes that are used in strings
+
+//then it's converted back to an array of objects by:
+let arrJson = JSON.parse(jsonArr);
+
+
+
+
