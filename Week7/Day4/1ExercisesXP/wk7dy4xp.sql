@@ -102,4 +102,38 @@ LIMIT 30;
 --  JOIN Department ON Employee.Dep_ID = Department.ID;
 
 --6-1
+SELECT film.description, actor.first_name, actor.last_name FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE film.description ILIKE '%sumo%' AND actor.last_name = 'Monroe' AND actor.first_name = 'Penelope';
 
+--6-2
+SELECT film.title, category.name, film.length, film.rating, film.description FROM film
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id = category.category_id
+WHERE film.length < 60 AND rating = 'R' AND category.name = 'Documentary';
+
+--6-3
+SELECT customer.first_name, customer.last_name, rental.return_date, inventory.store_id, film.title, film.rental_rate 
+FROM (film JOIN inventory ON film.film_id = inventory.film_id) -- Each inventory item is a copy of a film therefore 
+--this join goes from the table with the double cross meaning one and only one, to film.
+JOIN rental ON inventory.inventory_id = rental.inventory_id  --Each rental record pertains to a specific inventory item, 
+--therefore this join goes from the table with the double cross meaning one and only one, inventory, to rental.
+JOIN customer ON rental.customer_id = customer.customer_id  --Each rental is made by a specific customer, therefore this 
+--join goes from the table with the double cross meaning one and only one, customer, to rental.
+WHERE customer.first_name = 'Matthew' AND customer.last_name = 'Mahan' AND rental_rate > 4 AND return_date BETWEEN '2005-07-28' AND '2005-08-1';
+--I think I'm getting the hang of this!  On the chart, the table after the word JOIN has to be a table with the 
+--double cross symbol that means one and only one. So on the last join on this one, it wasn't JOIN rental on customer, 
+--it was JOIN customer on rental.  Inventory was joined to rental and then customer was joined to rental, according to the 
+--direction of the one and only one relationship on the ERD entity relationship diagram.
+
+--6-4
+SELECT customer.first_name, customer.last_name, film.title, 
+film.rental_rate, film.description
+FROM (film JOIN inventory ON film.film_id = inventory.film_id) 
+JOIN rental ON inventory.inventory_id = rental.inventory_id  
+JOIN customer ON rental.customer_id = customer.customer_id 
+WHERE customer.first_name = 'Matthew' AND customer.last_name = 'Mahan' AND (title ILIKE '%boat%' OR description ILIKE '%boat%')
+ORDER BY film.rental_rate DESC;
+--watch those parentheses when you need both AND and OR
+--if there are no pattern matches needed, the formate WHERE (field1, field2, field3) = (value1, value2, value3) is also good
