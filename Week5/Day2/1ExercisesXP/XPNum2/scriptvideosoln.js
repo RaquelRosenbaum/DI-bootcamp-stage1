@@ -3,29 +3,29 @@
 
 
 // INITIAL CODING PRE-REFACTORING:
-const input = document.getElementById("form"); 
-const button = document.getElementById("submit"); 
-const ul = document.querySelector("ul");
+// const input = document.getElementById("form"); 
+// const button = document.getElementById("submit"); 
+// const ul = document.querySelector("ul");
 
-button.addEventListener("click", function() {
-	if (input.value.length > 0) {
-		let li = document.createElement("li");
-		li.appendChild(document.createTextNode(input.value));
-		ul.appendChild(li);
-		input.value = "";
-	}
-})
+// button.addEventListener("click", function() {
+// 	if (input.value.length > 0) {
+// 		let li = document.createElement("li");
+// 		li.appendChild(document.createTextNode(input.value));
+// 		ul.appendChild(li);
+// 		input.value = "";
+// 	}
+// })
 
-input.addEventListener("keypress", function(event) {
-	if (input.value.length >0 && event.keyCode === 13) {
-		let li = document.createElement("li");
-		li.appendChild(document.createTextNode(input.value));
-		ul.appendChild(li);
-		input.value = "";
-	}
-})
+// input.addEventListener("keypress", function(event) {
+// 	if (input.value.length >0 && event.keyCode === 13) {
+// 		let li = document.createElement("li");
+// 		li.appendChild(document.createTextNode(input.value));
+// 		ul.appendChild(li);
+// 		input.value = "";
+// 	}
+// })
 
-//More notes- too much repetition, not as easy to understand the intent of the code, what it’s doing
+//insights taught in video- the above is too much repetition in the code, not as easy to understand the intent of the code, what it’s doing
 
 
 // AFTER REFACTORING:

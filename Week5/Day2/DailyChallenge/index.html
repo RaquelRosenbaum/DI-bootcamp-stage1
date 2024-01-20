@@ -6,19 +6,31 @@
     		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body>
-		<h1>Mad Libs</h1>
-	
+		<h1>Mad Libs</h1><br>
 		<form id="libform">
-			<label for="noun">Noun:</label><input type="text" id="noun"><br>
-			<label for="adjective">Adjective:</label><input type="text" id="adjective"><br>
-			<label for="person">Someone's Name:</label><input type="text" id="person"><br>
-			<label for="verb">Verb:</label><input type="text" id="verb"><br>
-			<label for="place">A place:</label><input type="text" id="place"><br>
-			<button id="lib-button">Lib it!</button>
+			<p>Please insert words below, as indicated by type of word:</p>
+			<label for="Adjective1">An Adjective:</label><input type="text" id="Adjective1"><br>
+			<label for="Noun1">A Noun:</label><input type="text" id="Noun1"><br>
+			<label for="Noun Plural1">A Plural Noun:</label><input type="text" id="Noun Plural1"><br>
+			<label for="Adjective2">An Adjective:</label><input type="text" id="Adjective2"><br>
+			<label for="Adjective3">An Adjective:</label><input type="text" id="Adjective3"><br>
+			<label for="Verb ending in ing1">A Verb Ending in ing:</label><input type="text" id="Verb ending in ing1"><br>
+			<label for="Verb ending in ing2">A Verb ending in ing:</label><input type="text" id="Verb ending in ing2"><br>
+			<label for="Food Plural1">A Food (in plural form) :</label><input type="text" id="Food Plural1"><br>
+			<label for="Body part plural">A Body Part (in plural form):</label><input type="text" id="Body part plural"><br>
+			<label for="Adjective6">An Adjective:</label><input type="text" id="Adjective6"><br>
+			<label for="Vehicle">A Vehicle:</label><input type="text" id="Vehicle"><br>
+			<label for="Food plural2">A Food (in plural form):</label><input type="text" id="Food plural2"><br>
+			<label for="Food plural3">A Food (in plural form):</label><input type="text" id="Food plural3"><br>
+			<label for="Something alive plural1">Something alive (in plural form):</label><input type="text" id="Something alive plural1"><br>
+			<label for="Something alive plural2">Something alive (in plural form):</label><input type="text" id="Something alive plural2"><br>
+			<label for="Adverb">An Adverb:</label><input type="text" id="Adverb"><br>
+			<label for="Noun3">A Noun:</label><input type="text" id="Noun3"><br>
+			<button id="lib-button">Lib It!</button>
 		</form>
 	
 		<p>Generated story: 
-		<span id="story"></span>
+		<span id="story">If you go to some ${Adjective1} place like Yellowstone National ${Noun1}, you must know how to deal with the wild animals such as bears and wolves and ${Noun Plural1}.  The most important of these is the bear. There are three kinds of bears, the grizzly bear, the ${Adjective2} bear, and the 4{Adjective3} bear.  Bears spend most of the time ${Verb ending in ing1} or ${Verb ending in ing2}.  Bears will come up to your car and beg for ${Food Plural1}.  They will stand on their hind legs and clap their ${Body part plural} together and pretend to be ${Adjective6}.  But do not get out of your ${Vehicle} or offer the bears ${Food plural2} or ${Food plural3}.  This same advice applies to other wild creatures such as ${Something alive plural1} and ${Something alive plural2}.  Remember all these rules and you will spend your vacation ${Adverb} and not get hugged by a/an ${Noun3}.</span>
 		</p>
 
 		<script src="script.js"></script>

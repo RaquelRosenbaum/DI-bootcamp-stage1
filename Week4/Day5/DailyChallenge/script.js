@@ -1,8 +1,5 @@
-// The assignment is impossible for us to come up with on our own at this level of the class- I see it as an opportunity to learn more use cases, but completing this assignment on my own even with help from the internet or the video was impossible and would be for anyone in the class (we are not presumed to have any programming background).  That's fine if the expectation is that what we are submitting here is essentially our attempt, then understanding the solution and learning new patterns and use cases from it.  What is the expectation?  Can we talk about that in class?
 
-
-// Instructions
-// Have you heard the infamous song “99 Bottles of Beer?”
+// Instructions// Have you heard the infamous song “99 Bottles of Beer?”
 // In this exercise you need to console.log the lyrics of our own 99 Bottles of Beer song.
 
 // ==============================
@@ -59,7 +56,7 @@
 
 // MY ATTEMPT 
 
-// I got really close, where it was decreasing appropriately and looping however many times it needed to, and the only problem was it wasn't decreasing to zero, but I can't get back to that state. 3 hours wasted thrashing around with tiny changes.  With ArcGIS (truly ANCIENT backend) we used to say, "don't start down the path of guessing, you'll end up thinking it worked because you were standing on one leg and jumped 3 times"
+// I got really close, where it was decreasing appropriately and looping however many times it needed to, and the only problem was it wasn't decreasing to zero, but I can't get back to that state. With ArcGIS (truly ANCIENT backend) we used to say, "don't start down the path of guessing, you'll end up thinking it worked because you were standing on one leg and jumped 3 times"
 
 function BottlesBeerWall99() {
     const bottleNumber = (Number(prompt("At what number bottle do you want to start the song? (1-99)")));//prompt user for starting bottleNumber
@@ -85,7 +82,7 @@ function BottlesBeerWall99() {
         console.log(`${i} bottles of beer,`);
         
         //I tried while or if conditionals, didn't work
-        //THIS WON"T ITERATE even with console.lot inside while or if statement (tearing hair out)
+        //THIS WON"T ITERATE even with console.log inside while or if statement 
         //the words "take one down" are the event to signify when the decrease needs to happen
         
         //Why doesn't the loop just iterate a bunch of times before it gets around to the console.logs?  It's an engine running in the background, after all.  What's stopping it from iterating all the way to 1 (until it crashes into the conditionals below) before the first console log? 
@@ -152,7 +149,7 @@ BottlesBeerWall99();
 // bottlesOfBeer(34);
  
 
-// Solution from Ziv in class (endless loop and doesn't do what assignment asks, DON'T implement will crash browser):
+// Solution from Ziv in class:
 
 // let i = 99;
 // let num = 1;

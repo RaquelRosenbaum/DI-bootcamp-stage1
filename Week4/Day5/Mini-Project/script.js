@@ -1,4 +1,4 @@
-The official submission is what is not commented out below, the rest is notes to myself and process
+// The official submission is what is not commented out below, the rest is notes to myself and process
 
 // MY FUTILE FIRST ATTEMPT (the experienced programmer took 45 minutes of thrashing around to produce the code below from video, however it was invaluable watching it, to pick through it, understand each phase of its development, taking valuable notes).  But I had to find another way to gain the most from this exercise, so I analyzed and then played monkey see monkey do, since I couldn't on my own or with Google produce the whole product without eventually seeing the answer.
 // ________________________
@@ -42,7 +42,7 @@ The official submission is what is not commented out below, the rest is notes to
 // function playTheGame() {
 //     const isUserReady = confirm("Do you want to play?")
 //     if (!isUserReady) return alert ("No problem, Goodbye") 
-//                 // if isUserReady is false, user pressed the cancel button instead of yes button in prompt box
+                // if isUserReady is false, user pressed the cancel button instead of yes button in prompt box
 //     let answer = prompt("Enter a number between 0 and 10")
 //     let numberOfTries = 0;
 //     const computerNumber = generateRandomNumber()
